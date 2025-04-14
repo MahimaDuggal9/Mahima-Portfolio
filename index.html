@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Mahima Duggal</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!-- AOS Library -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <style>
+
+        /* Contact Section Styling */
+#contact {
+    background-color: black !important;
+    padding: 60px 0;
+}
+
+#contact .btn-primary {
+    background-color: #ff8c00; /* Orange color */
+    border-color: #ff8c00;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+#contact .btn-primary:hover {
+    background-color: #e07b00;
+}
+.btn {
+    z-index: 10;
+    position: relative;
+}
+
+        /* For all certificate images */
+/* For all certificate images */
+.certificate-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area of the square */
+}
+
+/* Square container style */
+.square-bg {
+    width: 150px;  /* Set the size of the square */
+    height: 150px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative; /* Ensures the image stays inside the container */
+}
+
+        .text-muted-cg{
+            color:black;
+        }
+        /* Animated Background */
+        #portfolio {
+        position: relative;
+        overflow: hidden;
+        padding: 60px 0;
+    }
+
+    #portfolio:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300px;
+        height: 300px;
+        background-color: #0bade8; /* Orange color */
+        border-radius: 50%;
+        animation: pulse 4s infinite;
+        transform: translate(-50%, -50%);
+        z-index: -1; /* Makes sure the animation is behind the content */
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0.5;
+        }
+        50% {
+            transform: translate(-50%, -50%) scale(1.2);
+            opacity: 1;
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0.5;
+        }
+    }
+
+    .animated-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+    .animated-background .circle {
+        position: absolute;
+        border-radius: 50%;
+        background: linear-gradient(45deg, #c20078, #c20078);
+        opacity: 0.6;
+        animation: float 10s infinite;
+    }
+
+    .animated-background .circle:nth-child(1) {
+        width: 200px;
+        height: 200px;
+        top: 20%;
+        left: 10%;
+        animation-duration: 12s;
+    }
+
+    .animated-background .circle:nth-child(2) {
+        width: 300px;
+        height: 300px;
+        top: 50%;
+        left: 40%;
+        animation-duration: 15s;
+    }
+
+    .animated-background .circle:nth-child(3) {
+        width: 250px;
+        height: 250px;
+        top: 70%;
+        left: 70%;
+        animation-duration: 18s;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(0) translateX(0);
+        }
+        50% {
+            transform: translateY(-30px) translateX(30px);
+        }
+        100% {
+            transform: translateY(0) translateX(0);
+        }
+    }
+
+    #skills {
+        background-color: black;
+    }
+    .animated-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 0;
+    }
+    .animated-background .circle {
+        position: absolute;
+        border-radius: 50%;
+        background: linear-gradient(45deg, #ffa263, #fa7b25);
+        opacity: 0.6;
+        animation: float 10s infinite;
+    }
+    .animated-background .circle:nth-child(1) {
+        width: 200px;
+        height: 200px;
+        top: 20%;
+        left: 10%;
+        animation-duration: 12s;
+    }
+    .animated-background .circle:nth-child(2) {
+        width: 300px;
+        height: 300px;
+        top: 50%;
+        left: 40%;
+        animation-duration: 15s;
+    }
+    .animated-background .circle:nth-child(3) {
+        width: 250px;
+        height: 250px;
+        top: 70%;
+        left: 70%;
+        animation-duration: 18s;
+    }
+    .text-muted {
+    color: white !important;
+}
+
+    @keyframes float {
+        0% {
+            transform: translateY(0) translateX(0);
+        }
+        50% {
+            transform: translateY(-30px) translateX(30px);
+        }
+        100% {
+            transform: translateY(0) translateX(0);
+        }
+    }
+
+    .section-heading {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .section-subheading {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+    }
+    .fa-5x {
+        color: #ffc371;
+        transition: transform 0.3s;
+    }
+    .fa-5x:hover {
+        transform: scale(1.2);
+        color: #ff5f6d;
+    }
+    /* Add this CSS to your stylesheet */
+
+/* Add this to your custom CSS */
+#portfolio {
+    position: relative;
+    overflow: hidden;
+}
+
+
+#portfolio:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background-color: #c20078; /* Orange color */
+    border-radius: 50%;
+    animation: pulse 4s infinite;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Makes sure the animation is behind the content */
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0.5;
+    }
+}
+
+#portfolio .container {
+    position: relative;
+    z-index: 1;
+}
+
+</style>
+    
+</head>
+<body id="page-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead -->
+    <header class="masthead">
+        <div class="container">
+            <div class="masthead-subheading">Hi, I am Mahima Duggal</div>
+            <div class="masthead-heading text-uppercase">Welcome to my Portfolio</div>
+            <a class="btn btn-primary btn-xl text-uppercase" href="#skills">Tell Me More</a>
+
+            <!-- Social Links with Icons -->
+            <div class="social-icons mt-4">
+                <a href="https://www.linkedin.com/in/mahima-duggal-05b2a2255/" target="_blank" class="mx-2" title="LinkedIn">
+                    <img src="https://vectorseek.com/wp-content/uploads/2023/09/LinkedIn-in-Logo-Vector.svg-.png" alt="LinkedIn" style="width: 30px; height: 30px;">
+                </a>
+                <a href="https://leetcode.com/u/Mahimaduggal/" target="_blank" class="mx-2" title="LeetCode">
+                    <img src="https://miro.medium.com/max/2400/1*IC0JXUE3UEAfDfQnFyGtGA.jpeg" alt="LeetCode" style="width: 30px; height: 30px;">
+                </a>
+                <a href="https://www.hackerrank.com/profile/mahimaduggal797" target="_blank" class="mx-2" title="HackerRank">
+                    <img src="https://gdm-catalog-fmapi-prod.imgix.net/ProductLogo/8b9fc1fa-bb42-45c6-957b-3b6611c542f1.png?ixlib=react-9.0.3&ch=Width%2CDPR&auto=format&w=4088" alt="HackerRank" style="width: 30px; height: 30px;">
+                </a>
+                <a href="https://github.com/MahimaDuggal9" target="_blank" class="mx-2" title="GitHub">
+                    <img src="https://static-00.iconduck.com/assets.00/github-icon-2048x2048-dpporae2.png" alt="GitHub" style="width: 30px; height: 30px;">
+                </a>
+                <a href="https://medium.com/@mahimaduggal797" target="_blank" class="mx-2" title="Medium">
+                    <img src="https://miro.medium.com/max/1146/1*jcY-BmXNNrWTJCOchzqJrQ.jpeg" alt="Medium" style="width: 30px; height: 30px;">
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+    <!-- Skills Section -->
+<!-- Skills Section -->
+<section id="skills" style="position: relative; overflow: hidden; padding: 60px 0; color: white;">
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="container text-center" style="position: relative; z-index: 1;">
+        <h2 class="section-heading text-uppercase">Skills</h2>
+        <p class="section-subheading text-muted">My technical and professional expertise.</p>
+        <div class="row">
+            <!-- Skill 1 -->
+            <div class="col-md-4">
+                <i class="fab fa-java fa-5x mb-3"></i>
+                <h4 class="my-3">Java</h4>
+                <p>Proficient in building robust backend solutions using Java.</p>
+            </div>
+            <!-- Skill 2 -->
+            <div class="col-md-4">
+                <i class="fab fa-python fa-5x mb-3"></i>
+                <h4 class="my-3">Python</h4>
+                <p>Experienced in scripting and data analysis with Python.</p>
+            </div>
+            <!-- Skill 3 -->
+            <div class="col-md-4">
+                <i class="fab fa-html5 fa-5x mb-3"></i>
+                <h4 class="my-3">HTML & CSS</h4>
+                <p>Creating responsive and visually appealing designs.</p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <!-- Skill 4 -->
+            <div class="col-md-4">
+                <i class="fas fa-database fa-5x mb-3"></i>
+                <h4 class="my-3">MySQL</h4>
+                <p>Expertise in relational database management and queries.</p>
+            </div>
+            <!-- Skill 5 -->
+            <div class="col-md-4">
+                <i class="fas fa-server fa-5x mb-3"></i>
+                <h4 class="my-3">Node.js</h4>
+                <p>Building scalable and efficient server-side applications.</p>
+            </div>
+            <!-- Skill 6 -->
+            <div class="col-md-4">
+                <i class="fab fa-react fa-5x mb-3"></i>
+                <h4 class="my-3">React.js</h4>
+                <p>Developing dynamic and interactive user interfaces.</p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <!-- Skill 7 -->
+            <div class="col-md-4">
+                <i class="fas fa-leaf fa-5x mb-3"></i>
+                <h4 class="my-3">Spring Boot</h4>
+                <p>Developing robust microservices and RESTful APIs.</p>
+            </div>
+            <!-- Skill 8 -->
+            <div class="col-md-4">
+                <i class="fas fa-database fa-5x mb-3"></i>
+                <h4 class="my-3">MongoDB</h4>
+                <p>Experienced with NoSQL databases for flexible data solutions.</p>
+            </div>
+            <!-- Skill 9 -->
+            <div class="col-md-4">
+                <i class="fas fa-code fa-5x mb-3"></i>
+                <h4 class="my-3">C Programming</h4>
+                <p>Solid foundation in low-level programming and algorithms.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="fab fa-aws fa-5x mb-3"></i>
+                <h4 class="my-3">Amazon Web Services</h4>
+                <p>Expertise in cloud computing, scalable infrastructure, and distributed systems using AWS.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="fab fa-microsoft fa-5x mb-3"></i>
+                <h4 class="my-3">Microsoft Azure</h4>
+                <p>Proficient in developing and deploying cloud-based solutions with Azure services.</p>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+        
+        <!-- Project Grid-->
+        <section class="page-section" id="portfolio" style="position: relative; overflow: hidden; padding: 60px 0; background-color: black; color: white;">
+            <!-- Animated Background -->
+            <div class="animated-background">
+                <div class="circle" style="background-color: #c20078;"></div>
+                <div class="circle" style="background-color: #c20078;"></div>
+                <div class="circle" style="background-color: #c20078;"></div>
+            </div>
+        
+            <!-- Content -->
+            <div class="container text-center" style="position: relative; z-index: 1;">
+                <h2 class="section-heading text-uppercase">Projects</h2>
+                <h3 class="section-subheading text-muted">A Collection of Applications Built to Simplify and Enhance Everyday Life.</h3>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 1-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="https://media.kasperskydaily.com/wp-content/uploads/sites/92/2020/10/16044143/M187_Digital-voting-header.png" alt="..." />
+                            </a>
+                            <div class="portfolio-caption" style="background-color: transparent;">
+                                <div class="portfolio-caption-heading">FlexVote</div>
+                                <div class="portfolio-caption-subheading text-muted">Voting System</div>
+                                <a href="https://github.com/MahimaDuggal9/Voting-System" target="_blank">
+                                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" style="width: 30px; height: 30px; margin-top: 10px;" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 2-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="https://botup.com/images/ai-chatbot-screenshot-1.png?v=1681707593517652013" style="width: 3000px; height: 310px" alt="..." />
+                            </a>
+                            <div class="portfolio-caption" style="background-color: transparent;">
+                                <div class="portfolio-caption-heading">Buzz Talk</div>
+                                <div class="portfolio-caption-subheading text-muted">Chat App</div>
+                                <a href="https://github.com/MahimaDuggal9/BUZZ-TALK" target="_blank">
+                                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" style="width: 30px; height: 30px; margin-top: 10px;" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 3-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="https://techengage.com/wp-content/uploads/2018/11/best-news-apps-android-ios.jpg" style="width: 3000px; height: 310px" alt="..." />
+                            </a>
+                            <div class="portfolio-caption" style="background-color: transparent;">
+                                <div class="portfolio-caption-heading">Focus Feed</div>
+                                <div class="portfolio-caption-subheading text-muted">News Website</div>
+                                <a href="https://github.com/MahimaDuggal9/FOCUS-FEED" target="_blank">
+                                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" style="width: 30px; height: 30px; margin-top: 10px;" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        <!-- Portfolio item 4-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="https://www.biz4solutions.com/blog/wp-content/uploads/2021/04/event-management-app.jpg" style="width: 3000px; height: 310px" alt="..." />
+                            </a>
+                            <div class="portfolio-caption" style="background-color: transparent;">
+                                <div class="portfolio-caption-heading">Occasio</div>
+                                <div class="portfolio-caption-subheading text-muted">Event Management System</div>
+                                <a href="https://github.com/MahimaDuggal9/Quiz_App" target="_blank">
+                                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" style="width: 30px; height: 30px; margin-top: 10px;" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                        <!-- Portfolio item 5-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="https://cdn.dribbble.com/users/2501288/screenshots/14101089/sale_ecommerce_illustration_tr_16_psd_4x.jpg" style="width: 3000px; height: 310px" alt="..." />
+                            </a>
+                            <div class="portfolio-caption" style="background-color: transparent;">
+                                <div class="portfolio-caption-heading">Ecommerce Website</div>
+                                <div class="portfolio-caption-subheading text-muted">Ecommerce Website</div>
+                                <a href="https://github.com/MahimaDuggal9/E-Commerce-App" target="_blank">
+                                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" style="width: 30px; height: 30px; margin-top: 10px;" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 6-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="https://static.vecteezy.com/system/resources/previews/004/987/809/original/calculator-icon-with-long-shadow-free-vector.jpg" style="width: 3000px; height: 310px" alt="..." />
+                            </a>
+                            <div class="portfolio-caption" style="background-color: transparent;">
+                                <div class="portfolio-caption-heading">Python Calculator</div>
+                                <div class="portfolio-caption-subheading text-muted">Calculator</div>
+                                <a href="https://github.com/MahimaDuggal9/CALCULATOR" target="_blank">
+                                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" style="width: 30px; height: 30px; margin-top: 10px;" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+
+
+
+
+
+<!-- Certificates Section -->
+<section id="certificates" style="position: relative; background-color: black; overflow: hidden; padding: 60px 0; color:white;">
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="container text-center" style="position: relative; z-index: 1;">
+        <h2 class="section-heading text-uppercase">Certificates</h2>
+        <p class="section-subheading text-muted">A collection of certifications highlighting my knowledge and competencies.</p>
+        <div class="row">
+            <!-- Certificate 1 -->
+           
+            <!-- Certificate 2 -->
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <div class="circle-bg">
+                        <img class="mx-auto rounded-circle" src="https://images.yourstory.com/cs/images/companies/codechef-1592821643695.jpg?fm=auto&ar=1:1&mode=fill&fill=solid&fill-color=fff" alt="Competitive Programming Bootcamp" />
+                    </div>
+                    <h4>Competitive Programming Bootcamp</h4>
+                    <p class="text-muted">CodeChef</p>
+                    <a class="btn btn-dark btn-social mx-2" href="https://drive.google.com/file/d/14fgl5axN8qorqDA0-yai68l0aXoqzNP6/view?usp=sharing" target="_blank" aria-label="View Drive Certificate"><i class="fas fa-cloud"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <div class="circle-bg">
+                        <img class="mx-auto rounded-circle" src="https://analyticsdrift.com/wp-content/uploads/2021/05/Coursera-Free-Course-For-India.jpg" alt="Machine Learning Course" />
+                    </div>
+                    <h4>Machine Learning Course</h4>
+                    <p class="text-muted">Coursera</p>
+                    <a class="btn btn-dark btn-social mx-2" href="https://drive.google.com/file/d/1fCLZ-Dlm-nh2vZIJ_7NfY_U5pFJIAAId/view?usp=sharing" target="_blank" aria-label="View Drive Certificate"><i class="fas fa-cloud"></i></a>
+                </div>
+            </div>
+            <!-- Certificate 3 -->
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <div class="circle-bg">
+                        <img class="mx-auto rounded-circle" src="https://bbdu.ac.in/wp-content/uploads/2021/11/codequotient-logo.png" alt="Intellimerge 1.0" />
+                    </div>
+                    <h4>Intellimerge 1.0</h4>
+                    <p class="text-muted">CodeQuotient</p>
+                    <a class="btn btn-dark btn-social mx-2" href="https://drive.google.com/file/d/1AWEgZmErRfLcbNfwDeaqZA-dt36PFdJK/view?usp=sharing" target="_blank" aria-label="View Drive Certificate"><i class="fas fa-cloud"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <!-- Certificate 4 -->
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <div class="circle-bg">
+                        <img class="mx-auto rounded-circle" src="https://jobsnet.in/wp-content/uploads/2020/07/Simplilearn-logo.jpg" alt="Fundamentals of Devops on AWS" />
+                    </div>
+                    <h4>Fundamentals of Devops on AWS</h4>
+                    <p class="text-muted">Simplilearn</p>
+                    <a class="btn btn-dark btn-social mx-2" href="https://drive.google.com/file/d/1kTEi5EhIGj8CPJRGhV88AuBGqOgyRjRr/view?usp=sharing" target="_blank" aria-label="View Drive Certificate"><i class="fas fa-cloud"></i></a>
+                </div>
+            </div>
+            <!-- Certificate 5 -->
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <div class="circle-bg">
+                        <img class="mx-auto rounded-circle" src="https://logowik.com/content/uploads/images/chitkara-university9168.jpg" alt="Global Week Presentation" />
+                    </div>
+                    <h4>Global Week Presentation</h4>
+                    <p class="text-muted">Chitkara University</p>
+                    <a class="btn btn-dark btn-social mx-2" href="https://drive.google.com/file/d/1IFEvfW8a8pQ6SQUbgvj8fdwAXOHtWDZh/view?usp=sharing" target="_blank" aria-label="View Drive Certificate"><i class="fas fa-cloud"></i></a>
+                </div>
+            </div>
+            <!-- Certificate 6 -->
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <div class="circle-bg">
+                        <img class="mx-auto rounded-circle" src="https://ducs.in/sankalan/assets/images/sponsors/cn.jpeg" alt="Python Certificate" />
+                    </div>
+                    <h4>Python Certificate</h4>
+                    <p class="text-muted">Coding Ninja</p>
+                    <a class="btn btn-dark btn-social mx-2" href="https://drive.google.com/file/d/1HQMbO2BpQiI-neq8NerK9_Sk35MmDCez/view?usp=drive_link" target="_blank" aria-label="View Drive Certificate"><i class="fas fa-cloud"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <!-- Certificate 7 -->
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <div class="circle-bg">
+                        <img class="mx-auto rounded-circle" src="https://ducs.in/sankalan/assets/images/sponsors/cn.jpeg" alt="MERN STACK Certification" />
+                    </div>
+                    <h4>MERN STACK Certification</h4>
+                    <p class="text-muted">Coding Ninja</p>
+                    <a class="btn btn-dark btn-social mx-2" href="https://drive.google.com/file/d/1x3QpTjSN0ueGyog-bX9sdseDtImD4hYu/view?usp=drive_link" target="_blank" aria-label="View Drive Certificate"><i class="fas fa-cloud"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <div class="circle-bg">
+                        <img class="mx-auto rounded-circle" src="https://static.vecteezy.com/system/resources/previews/021/514/825/original/microsoft-software-brand-logo-symbol-with-name-design-illustration-with-black-background-free-vector.jpg"  />
+                    </div>
+                    <h4>Microsoft Azure AI Fundamentals</h4>
+                    <p class="text-muted">Microsoft</p>
+                    <a class="btn btn-dark btn-social mx-2" href="https://learn.microsoft.com/en-us/users/mahimaduggal-8814/achievements/74uvdpxz?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank" aria-label="View Drive Certificate"><i class="fas fa-cloud"></i></a>
+                </div>
+            </div>
+            <!-- Certificate 8 -->
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <div class="circle-bg">
+                        <img class="mx-auto rounded-circle" src="https://static.vecteezy.com/system/resources/previews/020/190/476/non_2x/infosys-logo-infosys-icon-free-free-vector.jpg" alt="Cyber Security" />
+                    </div>
+                    <h4>Cyber Security</h4>
+                    <p class="text-muted">Infosys</p>
+                    <a class="btn btn-dark btn-social mx-2" href="https://drive.google.com/file/d/108v8wX6NQv97xcmgLQ4b9ztKG9R8SQ6T/view?usp=drive_link" target="_blank" aria-label="View Drive Certificate"><i class="fas fa-cloud"></i></a>
+                </div>
+            </div>
+            <!-- Certificate 9 -->
+           
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+        <!-- About -->
+<section class="page-section" id="about" style="position: relative; background: black; overflow: hidden; padding: 60px 0;">
+    <!-- Background Design -->
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0; opacity: 0.2;">
+        <!-- Floating Orange Balls -->
+        <div style="position: absolute; top: 10%; left: 15%; width: 100px; height: 100px; background: #ff6600; border-radius: 50%;"></div>
+        <div style="position: absolute; top: 40%; left: 70%; width: 150px; height: 150px; background: #ff6600; border-radius: 50%;"></div>
+        <div style="position: absolute; top: 70%; left: 30%; width: 80px; height: 80px; background: #ff6600; border-radius: 50%;"></div>
+    </div>
+
+    <!-- Container -->
+    <div class="container" style="position: relative; z-index: 1;">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase" style="color: white;">Know Me Better</h2>
+            <h3 class="section-subheading text-muted" style="color: white !important;">My journey till now.</h3>
+        </div>
+        <ul class="timeline">
+            <!-- School Education -->
+            <li>
+                <div class="timeline-image" style="background: #ff6600; padding: 10px; border-radius: 50%;">
+                    <img class="rounded-circle img-fluid" src="https://static.vecteezy.com/system/resources/previews/000/455/459/original/vector-students-playing-in-front-of-school.jpg" alt="School" />
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 style="color: white;">School Education</h4>
+                        <h4 class="subheading" style="color: #ff6600;">Amravati Vidyalaya Senior Secondary School</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted-cg" style="color: white;">I completed my schooling in 2021, where I pursued a non-medical stream. During my time there, I developed a strong foundation in subjects like Mathematics, Physics, and Chemistry. My school experience helped shape my academic interests and motivated me to pursue a career in software development and engineering.</p>
+                    </div>
+                </div>
+            </li>
+            <!-- Graduation -->
+            <li class="timeline-inverted">
+                <div class="timeline-image" style="background: #ff6600; padding: 10px; border-radius: 50%;">
+                    <img class="rounded-circle img-fluid" src="https://static.vecteezy.com/system/resources/previews/006/740/096/original/woman-wearing-graduation-gown-robe-and-academic-cap-smiling-and-waving-hand-premium-women-celebrating-university-graduation-flat-cartoon-illustration-vector.jpg" alt="Graduation" />
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 style="color: white;">Graduation</h4>
+                        <h4 class="subheading" style="color: #ff6600;">Chitkara University</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted-cg" style="color: white;">Currently, I am in the final year of my Bachelor's degree in Computer Science and Engineering (CSE) at Chitkara University, which I began in 2021. Over the course of my studies, I have gained a strong understanding of core computer science concepts, software development, and technology integration.</p>
+                        <p class="text-muted-cg" style="color: white;">I have focused on subjects such as Java, C, C++, Python, and the MERN Stack, where I’ve gained both theoretical knowledge and hands-on experience. This has helped me develop problem-solving skills, coding proficiency, and a deep interest in full-stack development.</p>
+                    </div>
+                </div>
+            </li>
+            <!-- JPMorgan Chase & Co. Internship -->
+            <li>
+                <div class="timeline-image" style="background: #ff6600; padding: 10px; border-radius: 50%;">
+                    <img class="rounded-circle img-fluid" src="https://image.freepik.com/free-vector/illustrated-woman-being-intern-company_23-2148726151.jpg" alt="JPMorgan Chase & Co." />
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 style="color: white;">Virtual Software Engineering Internship</h4>
+                        <h4 class="subheading" style="color: #ff6600;">JPMorgan Chase & Co.</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted-cg" style="color: white;">During my internship at JPMorgan Chase & Co., I worked on the Midas project, which aims to optimize financial operations through automation and data processing. My primary responsibilities included backend development, API integration, and working with cloud technologies to ensure scalability and security. This internship allowed me to gain hands-on experience with financial technologies and deepen my knowledge of backend systems and cloud platforms.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+
+
+    <!-- Contact Section -->
+
+<!-- Contact Section -->
+<section class="page-section" id="contact" style="background-color: #f7f7f7; padding: 60px 0;">
+    <br><br>
+    
+    <div class="container">
+        <div class="text-center">
+            <h1 class="section-heading text-uppercase">Contact Me</h1>
+            <br><br>
+            <h3 class="section-subheading text-muted">Feel free to reach out to me!</h3>
+        </div>
+        <div class="row">
+            <!-- Email Information -->
+            <div class="col-lg-12 text-center">
+                <br><br>
+               
+                <!-- Send Email Button -->
+                <a href="mailto:mahimaduggal797@gmail.com" class="btn btn-primary btn-xl text-uppercase">Send Email</a>
+                <a class="btn btn-primary btn-xl text-uppercase" href="https://drive.google.com/drive/folders/170RgtGt2-1w8ANcBXc3Purk2gYxo1-np?usp=sharing" target="_blank" style="margin-left: 15px;">View Resume</a>
+                <br><br>
+                <br><br>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer text-center" style="margin-top: 60px;">
+        <img src="https://iatp.iusd.org/sites/iatp/files/images/articles/rectangleimages/reed-blog-post-image.jpg" style="width: 40%; height: auto; object-fit: cover;" alt="Footer Image">
+    </footer>
+</section>
+
+        
+        <!-- Portfolio Modals-->
+        <!-- Portfolio item 1 modal popup-->
+        <!-- Portfolio item 1 modal popup-->
+<!-- Portfolio item 1 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <!-- Project details-->
+                            <h2 class="text-uppercase">FlexVote</h2>
+                            <p class="item-intro text-muted">A user-friendly voting system with features to add candidates and vote securely.</p>
+                            <img class="img-fluid d-block mx-auto" src="https://media.kasperskydaily.com/wp-content/uploads/sites/92/2020/10/16044143/M187_Digital-voting-header.png" alt="FlexVote" />
+                            <p>FlexVote allows users to view candidates, cast votes, and manage candidates efficiently. It ensures secure and transparent voting with real-time updates.</p>
+                            <ul class="list-inline">
+                                <li><strong>Client:</strong> Government / NGOs</li>
+                                <li><strong>Category:</strong> Voting System</li>
+                                <li><strong>Languages:</strong> Java, SpringBoot, Spring Data JPA, RESTful APIs, JavaScript, Thymeleaf, Bootstrap, MYSQL</li> <!-- Languages used -->
+                            </ul>
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                Close Project
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Portfolio item 2 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <!-- Project details-->
+                            <h2 class="text-uppercase">Buzz Talk</h2>
+                            <p class="item-intro text-muted">A chat app that allows real-time communication between users.</p>
+                            <img class="img-fluid d-block mx-auto" src="https://botup.com/images/ai-chatbot-screenshot-1.png?v=1681707593517652013" alt="Buzz Talk" />
+                            <p>Buzz Talk is a real-time messaging application where users can create accounts, select avatars, and send messages instantly using Socket.IO and MongoDB for data storage.</p>
+                            <ul class="list-inline">
+                                <li><strong>Client:</strong> Social Platforms</li>
+                                <li><strong>Category:</strong> Chat Application</li>
+                                <li><strong>Languages:</strong> React, JavaScript, Node.js, MongoDB, Socket.IO</li> <!-- Languages used -->
+                            </ul>
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                Close Project
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Portfolio item 3 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <!-- Project details-->
+                            <h2 class="text-uppercase">Focus Feed</h2>
+                            <p class="item-intro text-muted">A news website with real-time updates, customizable filters, and secure user authentication.</p>
+                            <img class="img-fluid d-block mx-auto" src="https://techengage.com/wp-content/uploads/2018/11/best-news-apps-android-ios.jpg" alt="Focus Feed" />
+                            <p>Focus Feed is a comprehensive news website featuring the latest news updates, filtering options, and user accounts for a personalized experience.</p>
+                            <ul class="list-inline">
+                                <li><strong>Client:</strong> News Agencies</li>
+                                <li><strong>Category:</strong> News Website</li>
+                                <li><strong>Languages:</strong> JavaScript, React, Node.js, MongoDB</li> <!-- Languages used -->
+                            </ul>
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                Close Project
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Portfolio item 4 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <!-- Project details-->
+                            <h2 class="text-uppercase">Occasio</h2>
+                            <p class="item-intro text-muted">An event management system to organize and track events effortlessly.</p>
+                            <img class="img-fluid d-block mx-auto" src="https://www.biz4solutions.com/blog/wp-content/uploads/2021/04/event-management-app.jpg" alt="Occasio" />
+                            <p>Occasio enables users to create, manage, and RSVP to events with features like notifications, calendar views, and feedback for event organizers.</p>
+                            <ul class="list-inline">
+                                <li><strong>Client:</strong> Event Organizers</li>
+                                <li><strong>Category:</strong> Event Management</li>
+                                <li><strong>Languages:</strong> React,Bootstrap,Node.js,JavaScript,Express,MongoDB</li> <!-- Languages used -->
+                            </ul>
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                Close Project
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Portfolio item 5 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <!-- Project details-->
+                            <h2 class="text-uppercase">Ecommerce Website</h2>
+                            <p class="item-intro text-muted">An ecommerce platform offering a seamless shopping experience for users.</p>
+                            <img class="img-fluid d-block mx-auto" src="https://cdn.dribbble.com/users/2501288/screenshots/14101089/sale_ecommerce_illustration_tr_16_psd_4x.jpg" alt="Ecommerce Website" />
+                            <p>Our Ecommerce Website provides a user-friendly shopping experience, allowing customers to browse products, make purchases, and track their orders securely.</p>
+                            <ul class="list-inline">
+                                <li><strong>Client:</strong> Retailers</li>
+                                <li><strong>Category:</strong> E-commerce</li>
+                                <li><strong>Languages:</strong> HTML, CSS, JavaScript,Node.js,Express,MongoDB</li> <!-- Languages used -->
+                            </ul>
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                Close Project
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Portfolio item 6 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <!-- Project details-->
+                            <h2 class="text-uppercase">Python Calculator</h2>
+                            <p class="item-intro text-muted">A simple Python-based calculator app with basic arithmetic operations.</p>
+                            <img class="img-fluid d-block mx-auto" src="https://static.vecteezy.com/system/resources/previews/004/987/809/original/calculator-icon-with-long-shadow-free-vector.jpg" alt="Python Calculator" />
+                            <p>This Python Calculator application allows users to perform basic mathematical operations, providing a simple interface and quick results.</p>
+                            <ul class="list-inline">
+                                <li><strong>Client:</strong> Individual Users</li>
+                                <li><strong>Category:</strong> Utility App</li>
+                                <li><strong>Languages:</strong> Python</li> <!-- Languages used -->
+                            </ul>
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                Close Project
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+          <script>
+    AOS.init();
+</script>
+ 
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
