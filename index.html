@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Mahima's 3D Portfolio</title>
+  <title>Mahima's Space Portfolio</title>
   <style>
-    body { margin: 0; background: #0a0a0a; color: #e0e0e0; font-family: 'Fira Code', monospace; }
+    body { margin: 0; background: #000; color: #e0e0e0; font-family: 'Fira Code', monospace; }
     header { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); color: #00ffcc; font-size: 2rem; }
     .overlay { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); text-align: center; }
     .card {
-      background: rgba(20,20,20,0.9);
+      background: rgba(10,10,30,0.8);
       border: 1px solid #00ffcc;
-      border-radius: 8px;
+      border-radius: 12px;
       padding: 1rem;
       margin: 1rem;
       display: inline-block;
@@ -20,12 +20,13 @@
   </style>
 </head>
 <body>
-  <header>> whoami Mahima Duggal — Software Engineer</header>
+  <header>🚀 Mahima Duggal — Software Engineer</header>
   <div class="overlay">
-    <div class="card">FlexVote 🗳️ — Java, Spring Boot, MySQL</div>
-    <div class="card">BuzzTalk 💬 — JavaScript, Sockets, Real-time</div>
-    <div class="card">FocusFeed 📰 — APIs, JavaScript, UI/UX</div>
-    <div class="card">Occasio 🎟️ — Backend, APIs, Database</div>
+    <div class="card">About Me — Java developer, problem solver, coffee + code ☕</div>
+    <div class="card">Skills — Java, Spring Boot, Databases, React, Cloud</div>
+    <div class="card">Projects — FlexVote, BuzzTalk, FocusFeed, Occasio</div>
+    <div class="card">Journey — Genpact SDE I, Chitkara University, Side Quests</div>
+    <div class="card">Contact — GitHub, LinkedIn, LeetCode</div>
   </div>
   <canvas id="bg"></canvas>
 
@@ -36,21 +37,30 @@
     const renderer = new THREE.WebGLRenderer({canvas: document.getElementById('bg')});
     renderer.setSize(window.innerWidth, window.innerHeight);
 
-    // Neon grid plane
-    const gridHelper = new THREE.GridHelper(200, 50, 0x00ffcc, 0x00ffcc);
-    scene.add(gridHelper);
+    // Starfield
+    const starGeometry = new THREE.BufferGeometry();
+    const starCount = 2000;
+    const starPositions = new Float32Array(starCount * 3);
+    for (let i = 0; i < starCount * 3; i++) {
+      starPositions[i] = (Math.random() - 0.5) * 500;
+    }
+    starGeometry.setAttribute('position', new THREE.BufferAttribute(starPositions, 3));
+    const starMaterial = new THREE.PointsMaterial({color: 0xffffff, size: 0.7});
+    const stars = new THREE.Points(starGeometry, starMaterial);
+    scene.add(stars);
 
     // Rotating code sphere
-    const sphereGeometry = new THREE.SphereGeometry(20, 32, 32);
-    const sphereMaterial = new THREE.MeshBasicMaterial({wireframe: true, color: 0xff00ff});
+    const sphereGeometry = new THREE.SphereGeometry(30, 32, 32);
+    const sphereMaterial = new THREE.MeshBasicMaterial({wireframe: true, color: 0x00ffcc});
     const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
     scene.add(sphere);
 
-    camera.position.z = 60;
+    camera.position.z = 100;
 
     function animate() {
       requestAnimationFrame(animate);
       sphere.rotation.y += 0.002;
+      stars.rotation.y += 0.0005;
       renderer.render(scene, camera);
     }
     animate();
