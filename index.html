@@ -3,217 +3,324 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mahima Duggal — Software Engineer</title>
-<meta name="description" content="Mahima Duggal — Software Engineer, Java & Backend Developer">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<title>Mahima's World 🎀 | Software Engineer</title>
+<meta name="description" content="Mahima Duggal — Software Engineer portfolio">
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&display=swap');
+
 :root{
- --ink:#161722;--cream:#f8f4ec;--paper:#fffdf8;--lav:#8b7bc2;--lav2:#c9c0ed;
- --blue:#86bdd4;--rose:#c9849e;--gold:#d3b36c;--muted:#777583;--line:#dcd6cb;
+  --pink:#ff6fae; --hot:#f54291; --lav:#9a7bff; --blue:#78cfff;
+  --peach:#ffc7a8; --cream:#fff8ef; --ink:#3e315b; --purple:#7046c9;
+  --mint:#9ee7c8; --yellow:#ffd76b; --white:#fff;
 }
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif;overflow-x:hidden}
-a{text-decoration:none;color:inherit}button{font:inherit}
-.tropical-bg{position:fixed;inset:0;z-index:-3;overflow:hidden;
-background:
-radial-gradient(circle at 72% 15%,#f4dca84d 0 4%,transparent 20%),
-radial-gradient(circle at 25% 25%,#77b99a35 0 13%,transparent 35%),
-linear-gradient(135deg,#102d29 0%,#173d32 32%,#285644 62%,#12251f 100%);
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--ink);font-family:"Baloo 2",cursive;
+  background:
+    radial-gradient(circle at 10% 10%,#e7dff8 0 9%,transparent 24%),
+    radial-gradient(circle at 90% 15%,#d8f0f7 0 8%,transparent 24%),
+    radial-gradient(circle at 50% 70%,#f8e4d7 0 10%,transparent 28%),
+    var(--cream);
+  overflow-x:hidden;
 }
-.tropical-bg:before{content:"";position:absolute;inset:-10%;
-background:
-radial-gradient(ellipse at 12% 80%,#071814 0 18%,transparent 38%),
-radial-gradient(ellipse at 92% 70%,#0a1c17 0 20%,transparent 40%),
-linear-gradient(112deg,transparent 0 34%,#cce8c512 35%,transparent 42%),
-linear-gradient(72deg,transparent 0 52%,#f5e0a20d 53%,transparent 61%);
-filter:blur(2px);
+button,a{font:inherit}
+a{text-decoration:none;color:inherit}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.28;
+  background-image:radial-gradient(#c58eb3 1px,transparent 1px);
+  background-size:22px 22px;mask-image:linear-gradient(black,transparent 75%);
 }
-.tropical-bg:after{content:"";position:absolute;inset:0;
-background:
-linear-gradient(180deg,#06120f88 0%,transparent 32%,#07171277 100%),
-radial-gradient(ellipse at center,#ffffff00 30%,#03100c8c 100%);
+#cursor{
+  position:fixed;width:22px;height:22px;border:3px solid var(--hot);border-radius:50%;
+  pointer-events:none;z-index:9999;transform:translate(-50%,-50%);
+  transition:width .15s,height .15s,background .15s;mix-blend-mode:multiply;
 }
-.mist{position:absolute;border-radius:50%;filter:blur(38px);opacity:.25;animation:mistMove 12s ease-in-out infinite}
-.mist-a{width:55vw;height:18vh;left:-10%;bottom:15%;background:#b9e0c3}
-.mist-b{width:45vw;height:14vh;right:-8%;bottom:28%;background:#8bcbb5;animation-delay:-5s}
-@keyframes mistMove{50%{transform:translate3d(5vw,-12px,0) scale(1.08);opacity:.34}}
-.sunbeam{position:absolute;width:35vw;height:80vh;right:18%;top:-20%;transform:rotate(18deg);
-background:linear-gradient(90deg,transparent,#f7e4ae10,transparent);filter:blur(15px);animation:sway 8s ease-in-out infinite}
-@keyframes sway{50%{transform:rotate(22deg) translateX(35px)}}
-.leaf-field i{position:absolute;width:95px;height:35px;border-radius:100% 0 100% 0;background:linear-gradient(135deg,#4e8d68aa,#173d30cc);filter:blur(.2px);animation:leafFloat 9s ease-in-out infinite}
-.leaf-field i:after{content:"";position:absolute;width:2px;height:80px;background:#8ab89a66;left:47px;top:-20px;transform:rotate(28deg)}
-.leaf-field i:nth-child(1){left:2%;top:18%;transform:rotate(30deg);animation-delay:-1s}
-.leaf-field i:nth-child(2){left:14%;top:68%;transform:rotate(-35deg) scale(.7);animation-delay:-4s}
-.leaf-field i:nth-child(3){right:5%;top:17%;transform:rotate(70deg) scale(.8);animation-delay:-6s}
-.leaf-field i:nth-child(4){right:16%;top:72%;transform:rotate(15deg) scale(1.2);animation-delay:-2s}
-.leaf-field i:nth-child(5){left:34%;top:8%;transform:rotate(100deg) scale(.55);animation-delay:-7s}
-.leaf-field i:nth-child(6){right:30%;top:46%;transform:rotate(-20deg) scale(.6);animation-delay:-3s}
-.leaf-field i:nth-child(7){left:46%;bottom:7%;transform:rotate(60deg) scale(.8);animation-delay:-8s}
-.leaf-field i:nth-child(8){right:44%;top:14%;transform:rotate(-50deg) scale(.5);animation-delay:-5s}
-@keyframes leafFloat{50%{margin-top:-16px;margin-left:9px;opacity:.7}}
-#grain{position:fixed;inset:0;z-index:100;pointer-events:none;opacity:.065;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E")}
-.cursor{position:fixed;z-index:999;width:12px;height:12px;border:1px solid #fff;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);mix-blend-mode:difference;transition:.18s}
-.cursor.big{width:55px;height:55px;background:#fff2;border-color:#fff}
-.shell{width:min(1240px,calc(100% - 44px));margin:auto}
-nav{position:fixed;z-index:90;top:0;left:0;right:0;height:78px;display:flex;align-items:center;justify-content:space-between;padding:0 38px;color:#f6f2e9;mix-blend-mode:normal;background:linear-gradient(#0d0e14cc,transparent);backdrop-filter:blur(3px)}
-.logo{font:600 23px "Cormorant Garamond";letter-spacing:1px}.logo small{font:10px "DM Sans";letter-spacing:2px;display:block;color:#a8a5b0;margin-top:-4px}
-.navlinks{display:flex;gap:27px;font-size:11px;letter-spacing:1.4px;text-transform:uppercase}.navlinks a{opacity:.72;transition:.3s}.navlinks a:hover,.navlinks a.active{opacity:1;color:#d9cdef}
-.navdot{display:flex;align-items:center;gap:8px;font-size:10px;letter-spacing:1px;color:#b9b5c1}.navdot i{width:6px;height:6px;border-radius:50%;background:#94d8bd;box-shadow:0 0 15px #94d8bd}
-.hero{height:100vh;min-height:720px;position:relative;color:#f7f4ee;overflow:hidden;display:flex;align-items:center}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#06120fdd 0%,#0a1b1677 48%,#0a1b1625 100%),linear-gradient(0deg,#071512 0%,transparent 38%,#07151255 100%);z-index:1}
-.moon{position:absolute;width:430px;height:430px;border-radius:50%;right:8%;top:10%;background:radial-gradient(circle,#f6dda5 0,#e9c77855 24%,transparent 68%);box-shadow:0 0 120px #e9c77833;opacity:.55;filter:blur(1px)}
-.hero-copy{position:relative;z-index:4;padding-top:40px;max-width:650px}
-.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#c7bfd8;display:flex;align-items:center;gap:10px}.eyebrow:before{content:"";width:35px;height:1px;background:#c7bfd8}
-.hero h1{font:600 clamp(70px,10vw,148px)/.78 "Cormorant Garamond";letter-spacing:-5px;margin:27px 0 25px}
-.hero h1 em{font-weight:500;color:#c9bfe4}.hero h1 span{display:block;font:500 clamp(24px,3.2vw,45px)/1 "Space Grotesk";letter-spacing:0;color:#d9d5dc;margin-top:20px}
-.hero-desc{font-size:15px;line-height:1.8;color:#bbb9c2;max-width:560px}
-.hero-actions{display:flex;align-items:center;gap:12px;margin-top:30px}.btn{border:1px solid #ffffff3b;color:#fff;padding:12px 18px;font-size:11px;letter-spacing:1px;text-transform:uppercase;transition:.35s;position:relative;overflow:hidden}.btn:before{content:"";position:absolute;inset:0;background:#fff;transform:translateY(102%);transition:.35s;z-index:-1}.btn:hover{color:#17171e;transform:translateY(-3px)}.btn:hover:before{transform:none}.btn.gold{border-color:#c6ab75;color:#e7d5ad}
-.hero-girl{position:absolute;z-index:3;right:5%;bottom:-12px;width:min(620px,53vw);height:720px}
-.girl-glow{position:absolute;width:500px;height:500px;right:20px;bottom:20px;border-radius:50%;background:radial-gradient(circle,#a79ad944,transparent 66%);filter:blur(10px)}
-/* Inline anime coder illustration */
-.character{position:absolute;inset:0}
-.hair-back{position:absolute;left:33%;top:9%;width:240px;height:390px;background:linear-gradient(120deg,#302d40,#171823);border-radius:48% 54% 45% 52%;transform:rotate(8deg);box-shadow:-25px 20px 45px #0008}
-.hair-back:after{content:"";position:absolute;right:-28px;top:120px;width:90px;height:260px;background:#252433;border-radius:50%;transform:rotate(-8deg)}
-.neck{position:absolute;left:48%;top:39%;width:55px;height:80px;background:#e8c2b1;border-radius:0 0 30px 30px}
-.face{position:absolute;left:35%;top:18%;width:210px;height:250px;background:linear-gradient(145deg,#f5d1c1,#ddb09f);border-radius:48% 50% 52% 47%;z-index:3;box-shadow:inset -15px -20px 25px #bd8e83}
-.bangs{position:absolute;left:31%;top:10%;width:245px;height:130px;background:#2b2938;border-radius:70% 40% 55% 25%;z-index:4;transform:rotate(6deg)}
-.bangs:after{content:"";position:absolute;left:82px;top:40px;width:110px;height:130px;background:#2b2938;border-radius:20% 0 70% 70%;transform:rotate(17deg)}
-.eye{position:absolute;top:48%;width:34px;height:48px;background:#393347;border-radius:50%;z-index:6;box-shadow:inset 0 0 0 5px #f1c7b5}.eye.left{left:17%}.eye.right{right:17%}
-.eye:after{content:"";position:absolute;width:11px;height:16px;background:#fff;border-radius:50%;left:8px;top:7px}
-.nose{position:absolute;z-index:6;left:48%;top:65%;width:13px;height:18px;border-left:2px solid #bb887f;border-bottom:2px solid #bb887f;border-radius:0 0 0 10px}
-.lips{position:absolute;z-index:6;left:43%;top:77%;width:30px;height:12px;border-bottom:3px solid #a55e73;border-radius:50%}
-.blush{position:absolute;z-index:6;width:34px;height:14px;background:#d9898e55;border-radius:50%;top:68%}.blush.left{left:7%}.blush.right{right:7%}
-.glasses{position:absolute;z-index:7;top:46%;width:70px;height:52px;border:3px solid #3d394b;border-radius:12px;background:#ffffff0d;box-shadow:0 2px 0 #fff4}.glasses.left{left:5%}.glasses.right{right:5%}.glasses-bridge{position:absolute;z-index:8;top:55%;left:42%;width:38px;height:3px;background:#3d394b}
-.glasses-shine{position:absolute;inset:5px;background:linear-gradient(120deg,#fff8,transparent 40%);border-radius:9px}
-.earphone{position:absolute;z-index:5;left:28%;top:22%;width:265px;height:230px;border:12px solid #8f82ba;border-bottom:0;border-radius:140px 140px 0 0;opacity:.95}.earphone:before,.earphone:after{content:"";position:absolute;width:38px;height:80px;background:#8f82ba;border-radius:25px;top:160px}.earphone:before{left:-27px}.earphone:after{right:-27px}
-.torso{position:absolute;z-index:2;left:29%;top:51%;width:300px;height:330px;background:linear-gradient(145deg,#eeeaf2,#c9c2d9);border-radius:45% 45% 15% 15%;transform:rotate(-2deg);border:1px solid #ffffff55}
-.collar{position:absolute;z-index:4;left:43%;top:49%;width:85px;height:90px;border-left:3px solid #756b87;border-right:3px solid #756b87;clip-path:polygon(0 0,100% 0,72% 100%,28% 100%);background:#e5dce3}
-.arm{position:absolute;z-index:5;width:65px;height:245px;background:#e8c1af;border-radius:35px;border:2px solid #bd9189}.arm.left{left:26%;top:57%;transform:rotate(26deg)}.arm.right{left:69%;top:59%;transform:rotate(-34deg)}
-.laptop{position:absolute;z-index:8;left:37%;top:63%;width:300px;height:195px;background:#b9b0ca;border:7px solid #71677d;border-radius:18px 18px 10px 10px;box-shadow:0 22px 50px #0008}.laptop-screen{position:absolute;inset:17px;background:#1a1925;border-radius:8px;overflow:hidden;padding:15px;font:11px/1.6 monospace;color:#9fe2c7}.code-line{height:7px;background:#9fe2c744;border-radius:5px;margin:9px 0;width:70%}.code-line.p{background:#c8a8e955;width:45%}.code-line.b{background:#8fcce655;width:82%}.laptop-base{position:absolute;z-index:9;left:31%;top:89%;width:375px;height:25px;background:#d4cfdb;border:4px solid #71677d;border-radius:0 0 20px 20px;transform:skewX(-14deg)}
-.desk{position:absolute;z-index:1;left:10%;bottom:0;width:90%;height:150px;background:linear-gradient(#795f69,#564952);border-radius:80px 80px 0 0;opacity:.8}
-.plant{position:absolute;z-index:5;right:4%;bottom:100px;font-size:70px;filter:drop-shadow(0 10px 10px #0006)}
-.coffee{position:absolute;z-index:10;left:17%;top:82%;font-size:45px}
-.float-card{position:absolute;z-index:6;padding:11px 15px;border:1px solid #fff3;background:#181824aa;backdrop-filter:blur(8px);color:#ddd7e5;font-size:10px;letter-spacing:1px;text-transform:uppercase;animation:drift 5s ease-in-out infinite}.float-card.one{right:3%;top:35%}.float-card.two{left:2%;top:55%;animation-delay:1s}@keyframes drift{50%{transform:translateY(-15px) rotate(2deg)}}
-.scroll{position:absolute;z-index:4;bottom:30px;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#aaa8b0;display:flex;flex-direction:column;align-items:center;gap:10px}.scroll i{width:1px;height:42px;background:linear-gradient(#aaa8b0,transparent)}
-main{background:var(--cream);position:relative}
-.section{padding:120px 0}.section-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:45px}.section-number{font-size:10px;letter-spacing:3px;color:#958b9b;text-transform:uppercase}.section-title{font:600 clamp(45px,7vw,88px)/.85 "Cormorant Garamond";letter-spacing:-3px;margin:9px 0 0}.section-sub{max-width:430px;color:#817b85;line-height:1.7;font-size:13px}
-.about{display:grid;grid-template-columns:1.15fr .85fr;gap:60px}.about p{font-size:20px;line-height:1.7;color:#5f5963}.about p strong{color:#272431}.signature{font:italic 42px "Cormorant Garamond";color:#8d76ae;margin-top:30px}
-.stat-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-left:1px solid var(--line)}.stat{padding:25px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.stat b{display:block;font:600 40px "Space Grotesk";color:#67598a}.stat span{font-size:11px;color:#88808b;letter-spacing:1px;text-transform:uppercase}
-.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project{position:relative;min-height:430px;background:var(--paper);border:1px solid var(--line);overflow:hidden;padding:30px;transition:.6s}.project:hover{transform:translateY(-9px);box-shadow:0 25px 55px #6c5c7d18}.project-art{height:190px;background:linear-gradient(135deg,#e8e0f5,#dceef3,#f2e0dc);position:relative;margin-bottom:25px;overflow:hidden}.project-art:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:#ffffff77;right:-70px;top:-90px}.mock{position:absolute;width:68%;height:72%;left:16%;top:14%;background:#fbfafc;border:2px solid #756a7f;box-shadow:12px 12px 0 #b8adca;transform:rotate(-2deg);padding:13px}.mock .mhead{height:8px;width:55%;background:#aaa0c2;margin-bottom:15px}.mock .mrow{height:55px;display:grid;grid-template-columns:1fr 1fr;gap:7px}.mock .mrow i{background:#dcecf1;border-radius:5px}.project-num{font-size:10px;letter-spacing:2px;color:#9a909d}.project h3{font:600 35px "Cormorant Garamond";margin:7px 0}.project p{font-size:13px;line-height:1.7;color:#79717c;max-width:480px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:20px}.tag{font-size:10px;border:1px solid #d9d2db;padding:6px 9px;color:#6c6371}.project-link{position:absolute;right:25px;bottom:27px;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#8069a5}.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.skill{background:var(--cream);padding:28px;min-height:185px;transition:.4s}.skill:hover{background:#fffdf9}.skill-icon{font-size:28px;margin-bottom:18px}.skill h3{font:500 23px "Space Grotesk";margin:0 0 9px}.skill p{font-size:12px;line-height:1.7;color:#817b84}.skill .bar{height:2px;background:#ddd7d0;margin-top:20px;position:relative}.skill .bar i{position:absolute;height:2px;background:linear-gradient(90deg,#8e7cb8,#9ac6d7);left:0;top:0}
-.journey{max-width:900px;margin:auto;border-left:1px solid #cfc8c1}.event{display:grid;grid-template-columns:160px 1fr;gap:30px;padding:0 0 45px 35px;position:relative}.event:before{content:"";position:absolute;left:-4px;top:2px;width:7px;height:7px;background:#8f7ab8;border-radius:50%;box-shadow:0 0 0 5px var(--cream),0 0 0 6px #cfc8c1}.event-date{font-size:10px;letter-spacing:2px;color:#8b828e;text-transform:uppercase}.event h3{font:500 26px "Space Grotesk";margin:0 0 8px}.event p{font-size:13px;color:#7b747d;line-height:1.75;margin:0}.contact{min-height:650px;display:grid;place-items:center;text-align:center;background:#0e241d;color:#f5f1e9;position:relative;overflow:hidden}.contact:before{content:"";position:absolute;width:700px;height:700px;border:1px solid #ffffff12;border-radius:50%;box-shadow:0 0 0 80px #ffffff03,0 0 0 160px #ffffff02}.contact-inner{position:relative;z-index:2}.contact .eyebrow{justify-content:center}.contact .eyebrow:before{display:none}.contact h2{font:600 clamp(55px,9vw,120px)/.78 "Cormorant Garamond";letter-spacing:-4px;margin:25px 0}.contact p{color:#aaa8b0;max-width:540px;font-size:14px;line-height:1.8;margin:0 auto 28px}.contact-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.contact .btn{border-color:#ffffff38}.footer{padding:25px 0;background:#091612;color:#77757e;font-size:10px;letter-spacing:1px;display:flex;justify-content:space-between}
-.reveal{opacity:0;transform:translateY(45px);transition:opacity .9s ease,transform .9s ease}.reveal.visible{opacity:1;transform:none}
-@media(max-width:900px){nav{padding:0 18px}.navlinks{gap:13px}.navlinks a:nth-child(n+5){display:none}.hero-girl{right:-18%;width:650px;opacity:.65}.hero-copy{max-width:680px}.about{grid-template-columns:1fr}.skills{grid-template-columns:1fr 1fr}.projects{grid-template-columns:1fr}}
-@media(max-width:600px){.shell{width:min(100% - 28px,1240px)}nav{height:64px}.logo{font-size:19px}.navdot{display:none}.hero{min-height:780px}.hero h1{letter-spacing:-3px}.hero-girl{right:-45%;opacity:.5;transform:scale(.82);transform-origin:bottom right}.hero-copy{padding-top:35px}.hero-desc{font-size:14px}.section{padding:80px 0}.section-head{display:block}.section-sub{margin-top:20px}.skills{grid-template-columns:1fr}.event{grid-template-columns:1fr;gap:10px}.footer{display:block;text-align:center}.footer span{display:block;margin-top:8px}}
+.shell{width:min(1180px,calc(100% - 28px));margin:auto}
+nav{
+  position:fixed;top:15px;left:50%;transform:translateX(-50%);z-index:100;
+  display:flex;align-items:center;gap:4px;padding:7px 9px;
+  background:#fff9;border:3px solid #fff;box-shadow:0 8px 25px #8b69a633;
+  backdrop-filter:blur(15px);border-radius:50px;
+}
+nav .brand{font-weight:800;color:#6b58aa;padding:7px 13px;white-space:nowrap}
+nav a{padding:8px 12px;border-radius:25px;font-size:14px;font-weight:700;transition:.25s}
+nav a:hover,nav a.active{background:#e9e5f7;color:#62519c;transform:translateY(-2px)}
+.music{
+  position:fixed;right:18px;top:18px;z-index:101;border:0;background:#fff;
+  color:var(--purple);border-radius:30px;padding:10px 14px;box-shadow:0 7px 20px #8b69a633;
+  cursor:pointer;font-weight:700
+}
+.hero{min-height:820px;padding:125px 0 60px;position:relative;display:grid;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1fr 1.15fr;align-items:center;gap:20px}
+.hero-copy{position:relative;z-index:2}
+.badge{
+  display:inline-flex;align-items:center;gap:7px;padding:9px 15px;border-radius:30px;
+  background:#fff;border:2px solid #e1dced;box-shadow:0 6px 0 #cec5df;
+  font-weight:700;color:#765ca3
+}
+.badge span{font-size:16px}
+h1{font:800 clamp(58px,8vw,105px)/.85 "Fredoka";letter-spacing:-4px;margin:25px 0 18px;color:#514b72}
+h1 .pink{color:#bd6298;text-shadow:4px 4px 0 #ead8e5}
+h1 .blue{color:#529bbd;text-shadow:4px 4px 0 #d5edf4}
+.hero-copy p{font-size:21px;line-height:1.45;max-width:560px;margin:0 0 25px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  border:3px solid var(--ink);background:#fff;padding:11px 20px;border-radius:17px;
+  box-shadow:0 5px 0 var(--ink);font-weight:800;cursor:pointer;transition:.2s
+}
+.btn:hover{transform:translateY(-4px);box-shadow:0 9px 0 var(--ink)}
+.btn.primary{background:#8170c1;color:#fff;border-color:#5e5190;box-shadow:0 5px 0 #5e5190}
+.character-scene{
+  min-height:560px;position:relative;display:grid;place-items:end center;
+}
+.cloud{position:absolute;background:#fff;border-radius:50px;box-shadow:0 7px 0 #e7d8ee}
+.cloud.one{width:180px;height:55px;top:40px;right:10px}.cloud.two{width:130px;height:42px;top:115px;left:0}
+.cloud:before,.cloud:after{content:"";position:absolute;background:inherit;border-radius:50%}
+.cloud:before{width:70px;height:70px;left:25px;top:-32px}.cloud:after{width:55px;height:55px;right:25px;top:-20px}
+.stars{position:absolute;inset:0}.star{position:absolute;color:#ffb82e;font-size:30px;animation:float 3s ease-in-out infinite}
+.star:nth-child(1){left:10%;top:20%}.star:nth-child(2){right:8%;top:34%;animation-delay:.8s}.star:nth-child(3){left:4%;bottom:20%;animation-delay:1.3s}.star:nth-child(4){right:18%;bottom:9%;animation-delay:.4s}
+@keyframes float{50%{transform:translateY(-12px) rotate(10deg)}}
+.desk{
+  position:absolute;bottom:10px;width:92%;height:115px;background:#cda98f;
+  border:5px solid #4f465d;border-radius:35px 35px 18px 18px;box-shadow:0 12px 0 #df8e8f
+}
+.laptop{
+  position:absolute;bottom:88px;left:50%;transform:translateX(-50%);width:260px;height:180px;
+  background:#9bb5df;border:5px solid #4f465d;border-radius:18px 18px 9px 9px;
+  box-shadow:0 8px 0 #d86e9d;z-index:3
+}
+.laptop:before{
+  content:"</>  hello!";position:absolute;inset:17px;background:#4a3d62;border-radius:9px;
+  color:#9ff3d0;font:700 17px monospace;padding:35px 20px;white-space:pre;box-shadow:inset 0 0 25px #2d2540
+}
+.laptop:after{
+  content:"";position:absolute;width:290px;height:14px;background:#b7c8e8;bottom:-19px;left:-20px;
+  border:4px solid #4f465d;border-radius:10px
+}
+.girl{
+  position:absolute;bottom:105px;left:50%;transform:translateX(-52%);z-index:4;width:280px;height:380px
+}
+.hair{position:absolute;width:190px;height:235px;left:44px;top:0;background:#3e4058;border:5px solid #292b3d;border-radius:90px 90px 55px 55px}
+.hair:after{content:"";position:absolute;right:-27px;top:65px;width:65px;height:190px;background:#3e4058;border:5px solid #292b3d;border-radius:40px}
+.face{position:absolute;width:132px;height:150px;left:72px;top:43px;background:#f3cbb6;border:4px solid #4f465d;border-radius:48% 48% 50% 50%;z-index:2}
+.face:before,.face:after{content:"";position:absolute;width:13px;height:19px;background:#49334b;border-radius:50%;top:60px}
+.face:before{left:33px}.face:after{right:33px}
+.smile{position:absolute;width:27px;height:12px;border-bottom:4px solid #d05a7e;border-radius:50%;left:52px;top:92px}
+.blush{position:absolute;width:22px;height:10px;background:#ff91aa;border-radius:50%;top:88px;left:9px;opacity:.7}.blush.r{left:auto;right:9px}
+.glasses{position:absolute;z-index:5;width:43px;height:30px;top:52px;border:3px solid #3d4052;border-radius:9px;background:#ffffff20}
+.glasses.left-lens{left:16px}.glasses.right-lens{right:16px}
+.bridge{position:absolute;z-index:6;width:18px;height:3px;background:#3d4052;top:64px;left:57px}
+
+.bangs{position:absolute;left:69px;top:25px;width:145px;height:73px;background:#3e4058;border-radius:70% 50% 40% 20%;z-index:3;transform:rotate(-5deg)}
+.body{position:absolute;top:180px;left:62px;width:165px;height:150px;background:#8b9cc8;border:5px solid #4f465d;border-radius:65px 65px 25px 25px}
+.arm{position:absolute;z-index:5;width:42px;height:125px;background:#f3cbb6;border:4px solid #4f465d;border-radius:30px;top:204px}.arm.left{left:45px;transform:rotate(30deg)}.arm.right{right:34px;transform:rotate(-25deg)}
+.headphones{position:absolute;z-index:4;width:175px;height:125px;left:49px;top:25px;border:10px solid #d65ba3;border-bottom:0;border-radius:100px 100px 0 0}
+.cup{position:absolute;right:35px;bottom:105px;width:43px;height:55px;background:#a9d5dd;border:4px solid #4f465d;border-radius:8px 8px 15px 15px;z-index:5}.cup:before{content:"🧋";position:absolute;font-size:27px;left:4px;top:9px}
+.cat{position:absolute;left:25px;bottom:72px;font-size:64px;z-index:6;filter:drop-shadow(3px 3px 0 #70465e)}
+.sticker{position:absolute;padding:10px 15px;background:#fff;border:3px solid #70465e;border-radius:15px;font-weight:800;box-shadow:4px 4px 0 #f1a6c8;transform:rotate(-6deg)}
+.sticker.code{right:5%;top:35%;}.sticker.coffee{left:3%;bottom:12%;transform:rotate(6deg)}
+.section{padding:100px 0}
+.section-title{text-align:center;margin-bottom:35px}
+.kicker{color:#e44b91;font-size:14px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.section-title h2{font:800 clamp(42px,7vw,70px)/1 "Fredoka";margin:7px 0;color:#5a3b8e}
+.section-title p{font-size:18px;margin:auto;max-width:650px;color:#806f8f}
+.choose{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.portal{
+  min-height:170px;background:#fff;border:4px solid #fff;border-radius:25px;padding:18px 12px;
+  box-shadow:0 8px 0 #decde8,0 12px 25px #7c5c9a22;text-align:center;transition:.25s;cursor:pointer
+}
+.portal:hover{transform:translateY(-10px) rotate(var(--r));box-shadow:0 13px 0 #d2bfdf,0 20px 35px #7c5c9a33}
+.portal .emoji{font-size:48px;display:block}.portal b{display:block;font-size:19px;color:#5a3b8e}.portal small{color:#9a8ba4}
+.r{--r:2deg}.l{--r:-2deg}
+.panel{
+  margin-top:55px;background:#fff;border:4px solid #fff;border-radius:32px;padding:35px;
+  box-shadow:0 10px 0 #ddcbe7,0 20px 45px #78538b1c
+}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:25px;align-items:center}
+.panel h3{font:700 31px "Fredoka";color:#633d94;margin:0 0 10px}.panel p{font-size:17px;line-height:1.6;color:#75647e}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fact{background:#fff1f7;border:2px solid #ffd3e5;border-radius:20px;padding:18px;text-align:center}.fact b{font:800 30px "Fredoka";display:block;color:#ec4b93}.fact span{font-size:13px}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.game-card{
+  background:#fff;border:4px solid #fff;border-radius:28px;padding:22px;box-shadow:0 9px 0 #d9c7e5;
+  transition:.3s;position:relative;overflow:hidden
+}
+.game-card:hover{transform:translateY(-8px) rotate(.5deg)}
+.game-top{height:150px;border-radius:20px;background:linear-gradient(135deg,#ffd8e9,#d9ccff,#c9edff);position:relative;overflow:hidden;border:2px solid #f4ddea}
+.game-top:before{content:"✦  ✧  ✦";position:absolute;right:20px;top:18px;color:#fff;font-size:25px}.game-top .screen{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:75%;height:75%;background:#fff;border:3px solid #70465e;border-radius:14px;padding:12px}.screen .line{height:8px;background:#eadcff;border-radius:10px;margin:8px 0}.screen .line.pink{background:#ffb5d5;width:70%}.screen .mini-box{height:42px;background:#e8f7ff;border-radius:8px;margin-top:12px}
+.game-card h3{font:700 27px "Fredoka";color:#5c3a8e;margin:16px 0 4px}.game-card p{color:#817089;line-height:1.5;margin:0}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}.tag{font-size:12px;background:#f7edff;color:#744fb0;border-radius:20px;padding:7px 10px}.play{display:inline-block;margin-top:18px;color:#7661b2;font-weight:800}
+.skill-tree{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;position:relative}.power{background:#fff;border:3px solid #e8d9f0;border-radius:22px;padding:22px;text-align:center;position:relative}.power .ico{font-size:40px}.power h3{font:700 21px "Fredoka";margin:5px;color:#624090}.power p{color:#91819c;font-size:13px}.level{display:inline-block;background:#ffebf4;color:#e0448a;padding:5px 9px;border-radius:15px;font-size:11px;font-weight:800}
+.timeline{max-width:800px;margin:auto}.event{display:grid;grid-template-columns:150px 1fr;gap:25px;margin-bottom:20px;align-items:start}.date{background:#fff1f7;border:2px solid #ffd6e7;border-radius:18px;padding:13px;text-align:center;font-weight:800;color:#dc4387}.event .content{background:#fff;border:3px solid #fff;border-radius:22px;padding:20px;box-shadow:0 6px 0 #dfcee8}.event h3{font:700 23px "Fredoka";margin:0;color:#603d8f}.event p{margin:6px 0;color:#82728e;line-height:1.5}
+.contact{
+  background:linear-gradient(135deg,#ffe1ef,#e6dcff 48%,#d9f2ff);border:4px solid #fff;border-radius:35px;
+  padding:65px 30px;text-align:center;box-shadow:0 12px 0 #d5c5e4
+}
+.contact h2{font:800 clamp(45px,7vw,75px) "Fredoka";color:#633d94;margin:0}.contact p{font-size:18px;color:#76667e;max-width:600px;margin:12px auto 25px}
+footer{padding:35px 0 100px;text-align:center;color:#9a889e;font-weight:600}.hearts{color:#f45c9f}
+#toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,120px);background:#5d3b8f;color:#fff;padding:13px 20px;border-radius:30px;font-weight:700;z-index:500;transition:.35s;box-shadow:0 8px 25px #5d3b8f55}.toast-show{transform:translate(-50%,0)!important}
+@media(max-width:1050px){.skill-tree{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){nav{max-width:calc(100% - 20px);overflow:auto}.hero-grid,.about-grid{grid-template-columns:1fr}.character-scene{min-height:500px}.choose{grid-template-columns:repeat(3,1fr)}.project-grid{grid-template-columns:1fr}.skill-tree{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){nav .brand{display:none}nav a{padding:8px 9px;font-size:12px}.music{display:none}.hero{padding-top:105px}.hero-grid{display:block}h1{font-size:61px}.character-scene{min-height:470px;margin-top:25px}.laptop{width:220px;height:150px}.girl{transform:translateX(-50%) scale(.82);transform-origin:bottom center}.choose{grid-template-columns:1fr 1fr}.portal{min-height:145px}.panel{padding:22px}.skill-tree{grid-template-columns:1fr}.event{grid-template-columns:1fr}.date{text-align:left}.section{padding:75px 0}}
 </style>
 </head>
 <body>
-<div class="tropical-bg"><div class="mist mist-a"></div><div class="mist mist-b"></div><div class="sunbeam"></div><div class="leaf-field"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div id="grain"></div><div class="cursor"></div>
+<div id="cursor"></div>
 
 <nav>
-  <a class="logo" href="#home">Mahima Duggal<small>SOFTWARE ENGINEER</small></a>
-  <div class="navlinks"><a href="#home">Home</a><a href="#about">About</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#journey">Journey</a><a href="#contact">Contact</a></div>
-  <div class="navdot"><i></i> AVAILABLE TO BUILD</div>
+  <a class="brand" href="#home">🎀 Mahima's World</a>
+  <a href="#home">🏠</a><a href="#about">💗 About</a><a href="#skills">🧠 Skills</a>
+  <a href="#projects">💻 Projects</a><a href="#experience">🎮 Journey</a><a href="#contact">💌 Contact</a>
 </nav>
+<button class="music" id="musicBtn">🎵 Play vibes</button>
 
 <header class="hero" id="home">
-  <div class="moon"></div>
-  <div class="shell">
-    <div class="hero-copy reveal">
-      <div class="eyebrow">Java · Backend · Full Stack</div>
-      <h1>Building <em>digital</em><br>things that <em>matter.</em><span>Hi, I'm Mahima — a software engineer who loves clean systems, clever interfaces and turning ideas into working products.</span></h1>
-      <p class="hero-desc">Software Engineer / SDE I working with Java, Spring Boot, REST APIs, databases and modern development tools. I enjoy the space between engineering and experience — where good code meets something people actually want to use.</p>
-      <div class="hero-actions"><a class="btn gold" href="#work">Explore my work ↘</a><a class="btn" href="https://github.com/MahimaDuggal9" target="_blank">GitHub ↗</a><a class="btn" href="https://www.linkedin.com/in/mahima-duggal-05b2a2255/" target="_blank">LinkedIn ↗</a></div>
+<div class="shell hero-grid">
+  <div class="hero-copy">
+    <div class="badge"><span>✨</span> SOFTWARE ENGINEER · JAVA & BACKEND</div>
+    <h1>Hey there!<br>I'm <span class="pink">Mahima</span><br><span class="blue">Duggal ✦</span></h1>
+    <p>Java developer by day, problem-solver by nature, and <b>coffee + code enthusiast</b> with a soft spot for good UI. I build backend systems, APIs and web experiences that actually feel good to use. 💻💗</p>
+    <div class="buttons">
+      <a class="btn primary" href="#projects">🎮 Start exploring</a>
+      <a class="btn" href="https://github.com/MahimaDuggal9" target="_blank">🐙 GitHub</a>
     </div>
   </div>
 
-  <div class="hero-girl">
-    <div class="girl-glow"></div>
-    <div class="character">
-      <div class="hair-back"></div><div class="earphone"></div>
-      <div class="face"><i class="eye left"></i><i class="eye right"></i><i class="nose"></i><i class="lips"></i><i class="blush left"></i><i class="blush right"></i><i class="glasses left"><b class="glasses-shine"></b></i><i class="glasses right"><b class="glasses-shine"></b></i><i class="glasses-bridge"></i></div>
-      <div class="bangs"></div><div class="neck"></div><div class="collar"></div><div class="torso"></div>
+  <div class="character-scene">
+    <div class="cloud one"></div><div class="cloud two"></div>
+    <div class="stars"><i class="star">✦</i><i class="star">✧</i><i class="star">★</i><i class="star">✦</i></div>
+    <div class="sticker code">💻 girl coder!</div><div class="sticker coffee">☕ powered by coffee</div>
+    <div class="desk"></div>
+    <div class="girl">
+      <div class="hair"></div>
+      <div class="face">
+        <i class="blush"></i><i class="blush r"></i>
+        <i class="glasses left-lens"></i><i class="glasses right-lens"></i>
+        <i class="bridge"></i><i class="smile"></i>
+      </div>
+      <div class="bangs"></div><div class="headphones"></div><div class="body"></div>
       <div class="arm left"></div><div class="arm right"></div>
-      <div class="laptop"><div class="laptop-screen"><div>// mahima.dev</div><div class="code-line b"></div><div class="code-line p"></div><div class="code-line"></div><div class="code-line b"></div><div class="code-line p"></div></div></div>
-      <div class="laptop-base"></div><div class="desk"></div><div class="coffee">☕</div><div class="plant">🪴</div>
-      <div class="float-card one">Java / Spring Boot</div><div class="float-card two">0101 · CREATE · DEBUG · REPEAT</div>
     </div>
+    <div class="laptop"></div><div class="cup"></div><div class="cat">🐱</div>
   </div>
-  <div class="scroll">Scroll to explore<i></i></div>
+</div>
 </header>
 
-<main>
 <section class="section" id="about">
 <div class="shell">
-  <div class="section-head reveal"><div><div class="section-number">01 — About</div><h2 class="section-title">More than a résumé.</h2></div><p class="section-sub">A little context behind the person writing the code — curious, hands-on and happiest when a complicated problem finally clicks.</p></div>
-  <div class="about">
-    <div class="reveal"><p>I'm <strong>Mahima Duggal</strong>, a Software Engineer at Genpact with a strong focus on <strong>Java, Spring Boot, REST APIs and backend engineering.</strong></p><p>I like understanding how things work under the hood, designing clean solutions and then making the experience feel effortless on the surface. Along the way I've worked with databases, cloud tools, Power Platform, automation and AI-assisted solutions.</p><div class="signature">— Mahima</div></div>
-    <div class="stat-grid reveal"><div class="stat"><b>Java</b><span>Primary stack</span></div><div class="stat"><b>SDE I</b><span>Current role</span></div><div class="stat"><b>4+</b><span>Major projects</span></div><div class="stat"><b>DSA</b><span>Always learning</span></div></div>
+  <div class="section-title"><div class="kicker">🌷 START</div><h2>Choose your destination</h2><p>Welcome to my little corner of the internet. Click around — this isn't a boring résumé. 🎀</p></div>
+  <div class="choose">
+    <a class="portal l" href="#about"><span class="emoji">🏠</span><b>About Me</b><small>Get to know me!</small></a>
+    <a class="portal r" href="#projects"><span class="emoji">💻</span><b>Projects</b><small>Things I built!</small></a>
+    <a class="portal l" href="#skills"><span class="emoji">🧠</span><b>Skills</b><small>My superpowers!</small></a>
+    <a class="portal r" href="#experience"><span class="emoji">🏆</span><b>Achievements</b><small>My proud moments!</small></a>
+    <a class="portal l" href="#experience"><span class="emoji">🎒</span><b>Experience</b><small>My journey!</small></a>
+    <a class="portal r" href="#contact"><span class="emoji">💌</span><b>Contact</b><small>Let's connect!</small></a>
+  </div>
+
+  <div class="panel about-grid">
+    <div>
+      <h3>Hi, I'm Mahima! 💕</h3>
+      <p>I'm a Software Engineer at Genpact with a passion for <b>Java, Spring Boot, backend engineering and building things from scratch.</b> I love solving problems, learning new technologies and turning “wait… can we make this?” into “yep, it's working!” ✨</p>
+      <p>When I'm not coding, you'll probably find me with coffee, music, cats, or planning my next side project. ☕🐱</p>
+      <div class="buttons"><a class="btn primary" href="mailto:mahimaduggal797@gmail.com">💌 Say hello</a><a class="btn" href="https://www.linkedin.com/in/mahima-duggal-05b2a2255/" target="_blank">💼 LinkedIn</a></div>
+    </div>
+    <div class="facts">
+      <div class="fact"><b>Java</b><span>main character</span></div>
+      <div class="fact"><b>SDE I</b><span>current level</span></div>
+      <div class="fact"><b>4+</b><span>major projects</span></div>
+      <div class="fact"><b>DSA</b><span>always leveling up</span></div>
+    </div>
   </div>
 </div>
 </section>
 
-<section class="section" id="work">
+<section class="section" id="projects">
 <div class="shell">
-  <div class="section-head reveal"><div><div class="section-number">02 — Selected work</div><h2 class="section-title">Things I've built.</h2></div><p class="section-sub">Projects where backend logic, product thinking and a little obsession with details come together.</p></div>
-  <div class="projects">
-    <article class="project reveal"><div class="project-art"><div class="mock"><div class="mhead"></div><div class="mrow"><i></i><i></i></div></div></div><div class="project-num">01 / JAVA · BACKEND</div><h3>FlexVote</h3><p>Secure online voting platform for voter registration, candidate management and real-time vote tallying.</p><div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">MySQL</span><span class="tag">REST APIs</span></div><a class="project-link" href="https://github.com/MahimaDuggal9/Voting-System" target="_blank">GitHub ↗</a></article>
-    <article class="project reveal"><div class="project-art"><div class="mock"><div class="mhead"></div><div class="mrow"><i></i><i></i></div></div></div><div class="project-num">02 / REAL-TIME</div><h3>BuzzTalk</h3><p>Chat application designed around live messaging, typing indicators, profiles and real-time communication.</p><div class="tags"><span class="tag">JavaScript</span><span class="tag">Sockets</span><span class="tag">Real-time</span></div><a class="project-link" href="https://github.com/MahimaDuggal9/BUZZ-TALK" target="_blank">GitHub ↗</a></article>
-    <article class="project reveal"><div class="project-art"><div class="mock"><div class="mhead"></div><div class="mrow"><i></i><i></i></div></div></div><div class="project-num">03 / PRODUCT</div><h3>FocusFeed</h3><p>News platform with search, filters, categories, live articles and bookmarking focused on a clean user experience.</p><div class="tags"><span class="tag">JavaScript</span><span class="tag">APIs</span><span class="tag">UI / UX</span></div><a class="project-link" href="https://github.com/MahimaDuggal9/FOCUS-FEED" target="_blank">GitHub ↗</a></article>
-    <article class="project reveal"><div class="project-art"><div class="mock"><div class="mhead"></div><div class="mrow"><i></i><i></i></div></div></div><div class="project-num">04 / FULL STACK</div><h3>Occasio</h3><p>Event management system for discovering, creating and organizing events with participation history and reminders.</p><div class="tags"><span class="tag">Backend</span><span class="tag">APIs</span><span class="tag">Database</span></div><a class="project-link" href="https://github.com/MahimaDuggal9/Campus-Events" target="_blank">GitHub ↗</a></article>
+  <div class="section-title"><div class="kicker">🕹️ ARCADE</div><h2>My project arcade</h2><p>Four builds. Four little worlds. Pick one and press play. ✨</p></div>
+  <div class="project-grid">
+    <article class="game-card"><div class="game-top"><div class="screen"><div class="line pink"></div><div class="line"></div><div class="mini-box"></div></div></div><h3>FlexVote 🗳️</h3><p>Secure online voting system for registration, candidate management and vote tallying.</p><div class="tags"><span class="tag">☕ Java</span><span class="tag">🌱 Spring Boot</span><span class="tag">🗄️ MySQL</span><span class="tag">🔌 REST</span></div><a class="play" href="https://github.com/MahimaDuggal9/Voting-System" target="_blank">View on GitHub ↗</a></article>
+    <article class="game-card"><div class="game-top"><div class="screen"><div class="line"></div><div class="mini-box"></div><div class="line pink"></div></div></div><h3>BuzzTalk 💬</h3><p>Real-time chat experience with live messaging, profiles and interactive communication.</p><div class="tags"><span class="tag">⚡ JavaScript</span><span class="tag">💬 Sockets</span><span class="tag">✨ Real-time</span></div><a class="play" href="https://github.com/MahimaDuggal9/BUZZ-TALK" target="_blank">View on GitHub ↗</a></article>
+    <article class="game-card"><div class="game-top"><div class="screen"><div class="line pink"></div><div class="line"></div><div class="mini-box"></div></div></div><h3>FocusFeed 📰</h3><p>News platform with articles, search, filters, categories and bookmarks.</p><div class="tags"><span class="tag">🌐 APIs</span><span class="tag">⚡ JavaScript</span><span class="tag">🎨 UI/UX</span></div><a class="play" href="https://github.com/MahimaDuggal9/FOCUS-FEED" target="_blank">View on GitHub ↗</a></article>
+    <article class="game-card"><div class="game-top"><div class="screen"><div class="mini-box"></div><div class="line pink"></div><div class="line"></div></div></div><h3>Occasio 🎟️</h3><p>Event management platform for discovering, creating and organizing events.</p><div class="tags"><span class="tag">🧩 Backend</span><span class="tag">🔌 APIs</span><span class="tag">🗄️ Database</span></div><a class="play" href="https://github.com/MahimaDuggal9/Campus-Events" target="_blank">View on GitHub ↗</a></article>
   </div>
 </div>
 </section>
 
 <section class="section" id="skills">
 <div class="shell">
-  <div class="section-head reveal"><div><div class="section-number">03 — Toolkit</div><h2 class="section-title">My stack.</h2></div><p class="section-sub">The tools I use to move from idea → architecture → API → product.</p></div>
-  <div class="skills">
-    <div class="skill reveal"><div class="skill-icon">☕</div><h3>Java & Backend</h3><p>Java 17/21 · OOP · Spring Boot · Spring MVC · Spring Security · JPA · Hibernate · REST APIs · Microservices · JWT · Maven</p><div class="bar"><i style="width:92%"></i></div></div>
-    <div class="skill reveal"><div class="skill-icon">🗄️</div><h3>Data</h3><p>SQL · MySQL · MongoDB · database design · query optimization · persistence with JPA / Hibernate</p><div class="bar"><i style="width:86%"></i></div></div>
-    <div class="skill reveal"><div class="skill-icon">⚛️</div><h3>Web</h3><p>JavaScript · React · HTML · CSS · responsive interfaces · API integration · user-focused experiences</p><div class="bar"><i style="width:80%"></i></div></div>
-    <div class="skill reveal"><div class="skill-icon">☁️</div><h3>Cloud & DevOps</h3><p>AWS · Docker · Git · GitHub · CI/CD · Linux · deployment workflows and engineering tooling</p><div class="bar"><i style="width:75%"></i></div></div>
-    <div class="skill reveal"><div class="skill-icon">⚙️</div><h3>Automation</h3><p>Power Automate · Power Apps · RPA · workflow automation · enterprise process solutions</p><div class="bar"><i style="width:78%"></i></div></div>
-    <div class="skill reveal"><div class="skill-icon">🧠</div><h3>Problem Solving</h3><p>DSA · debugging · clean architecture · AI-assisted development · continuous learning</p><div class="bar"><i style="width:84%"></i></div></div>
+  <div class="section-title"><div class="kicker">🧠 SKILL TREE</div><h2>Skill tree unlocked</h2><p>My current developer superpowers — with plenty more loading... 🌸</p></div>
+  <div class="skill-tree">
+    <div class="power"><div class="ico">☕</div><h3>Java</h3><span class="level">MAX ENERGY</span><p>OOP · Collections · APIs · Java 17/21</p></div>
+    <div class="power"><div class="ico">🌱</div><h3>Spring Boot</h3><span class="level">LEVEL 8</span><p>REST · Security · JPA · Microservices</p></div>
+    <div class="power"><div class="ico">🗄️</div><h3>Databases</h3><span class="level">LEVEL 7</span><p>SQL · MySQL · MongoDB · Hibernate</p></div>
+    <div class="power"><div class="ico">⚛️</div><h3>Frontend</h3><span class="level">LEVEL 6</span><p>JavaScript · React · HTML · CSS</p></div>
+    <div class="power"><div class="ico">☁️</div><h3>Cloud & Tools</h3><span class="level">LEVEL 5</span><p>AWS · Docker · CI/CD · Git · Linux</p></div>
+    <div class="power"><div class="ico">⚙️</div><h3>Automation</h3><span class="level">LEVEL 6</span><p>Power Automate · Power Apps · RPA · AI-assisted solutions</p></div>
+    <div class="power"><div class="ico">🧩</div><h3>Problem Solving</h3><span class="level">ALWAYS UPGRADING</span><p>DSA · debugging · clean architecture</p></div>
   </div>
 </div>
 </section>
 
-<section class="section" id="journey">
+<section class="section" id="experience">
 <div class="shell">
-  <div class="section-head reveal"><div><div class="section-number">04 — Journey</div><h2 class="section-title">Where I've been.</h2></div><p class="section-sub">A few chapters of the story so far — with plenty more being written.</p></div>
-  <div class="journey">
-    <div class="event reveal"><div class="event-date">2025 — Present</div><div><h3>Software Developer / SDE I · Genpact</h3><p>Working across Java, Spring Boot, REST APIs and enterprise application development, with hands-on Power Platform, Power Automate/RPA and AI-assisted solutions.</p></div></div>
-    <div class="event reveal"><div class="event-date">2021 — 2025</div><div><h3>B.Tech — Computer Science · Chitkara University</h3><p>Built software projects and strengthened foundations in Java, DSA, databases, web development, machine learning and collaborative engineering.</p></div></div>
-    <div class="event reveal"><div class="event-date">Ongoing</div><div><h3>Learning, building, improving.</h3><p>Practicing DSA, exploring backend engineering, cloud and modern development tools — and building things simply because I want to see if I can.</p></div></div>
+  <div class="section-title"><div class="kicker">🏆 JOURNEY</div><h2>My journey map</h2><p>Plotting the little milestones that got me here. 🗺️</p></div>
+  <div class="timeline">
+    <div class="event"><div class="date">2025 → now</div><div class="content"><h3>💼 Software Developer / SDE I · Genpact</h3><p>Working across Java, Spring Boot, REST APIs and enterprise application development, with hands-on Power Platform, Power Automate/RPA and AI-assisted solutions.</p></div></div>
+    <div class="event"><div class="date">2021 → 2025</div><div class="content"><h3>🎓 B.Tech Computer Science · Chitkara University</h3><p>Built projects, strengthened Java and DSA foundations and explored web development, databases, cloud and machine learning.</p></div></div>
+    <div class="event"><div class="date">ongoing</div><div class="content"><h3>✨ Side Quest: Keep Learning</h3><p>Practicing DSA, building projects and exploring backend engineering, cloud and modern developer tools.</p></div></div>
   </div>
 </div>
 </section>
 
-<section id="contact" class="contact">
-<div class="contact-inner reveal"><div class="eyebrow">Let's build something</div><h2>Have an idea?<br>Let's make it real.</h2><p>I'm interested in software engineering opportunities where I can contribute to real products, learn from strong engineers and solve meaningful problems.</p><div class="contact-links"><a class="btn gold" href="mailto:mahimaduggal797@gmail.com">Email me ↗</a><a class="btn" href="https://www.linkedin.com/in/mahima-duggal-05b2a2255/" target="_blank">LinkedIn ↗</a><a class="btn" href="https://leetcode.com/u/Mahimaduggal/" target="_blank">LeetCode ↗</a></div></div>
+<section class="section" id="contact">
+<div class="shell">
+  <div class="contact">
+    <div class="kicker">💌 LET’S CONNECT</div>
+    <h2>Wanna team up?</h2>
+    <p>If you're looking for a software engineer who likes building, learning and bringing a little personality to the code — let's talk. 🎀</p>
+    <div class="buttons" style="justify-content:center"><a class="btn primary" href="mailto:mahimaduggal797@gmail.com">💗 Send me a message</a><a class="btn" href="https://leetcode.com/u/Mahimaduggal/" target="_blank">🧩 LeetCode</a><a class="btn" href="https://github.com/MahimaDuggal9" target="_blank">🐙 GitHub</a></div>
+  </div>
+</div>
 </section>
-<footer class="footer shell"><span>© 2026 Mahima Duggal</span><span>Java · Spring Boot · Software Engineering</span></footer>
-</main>
+
+<footer>Made with <span class="hearts">♡</span>, coffee ☕ & lots of <span class="hearts">pink</span> · Mahima Duggal · 2026</footer>
+<div id="toast">🎀 Vibe mode activated!</div>
 
 <script>
-const canvas=document.getElementById("stars"),ctx=canvas.getContext("2d");let W,H,stars=[];
-function resize(){W=canvas.width=innerWidth*devicePixelRatio;H=canvas.height=innerHeight*devicePixelRatio;canvas.style.width=innerWidth+"px";canvas.style.height=innerHeight+"px";stars=Array.from({length:Math.min(230,Math.floor(innerWidth/5))},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.7+.2,a:Math.random(),s:Math.random()*.25+.05}))}
-resize();addEventListener("resize",resize);
-function starLoop(){ctx.clearRect(0,0,W,H);for(const s of stars){s.y+=s.s;if(s.y>H)s.y=0;ctx.globalAlpha=.2+s.a*.7;ctx.fillStyle="#fff";ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fill()}requestAnimationFrame(starLoop)}starLoop();
+const cursor=document.getElementById("cursor");
+document.addEventListener("mousemove",e=>{cursor.style.left=e.clientX+"px";cursor.style.top=e.clientY+"px"});
+document.querySelectorAll("a,.btn,.portal,.music").forEach(el=>{
+  el.addEventListener("mouseenter",()=>{cursor.style.width="34px";cursor.style.height="34px";cursor.style.background="#ff6fae33"});
+  el.addEventListener("mouseleave",()=>{cursor.style.width="22px";cursor.style.height="22px";cursor.style.background="transparent"});
+});
+const links=[...document.querySelectorAll("nav a[href^='#']")];
+const sections=[...document.querySelectorAll("header[id],section[id]")];
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){
+    links.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id));
+  }});
+},{threshold:.35});
+sections.forEach(s=>io.observe(s));
 
-const cursor=document.querySelector(".cursor");
-addEventListener("mousemove",e=>{cursor.style.left=e.clientX+"px";cursor.style.top=e.clientY+"px"});
-document.querySelectorAll("a,.btn").forEach(x=>{x.addEventListener("mouseenter",()=>cursor.classList.add("big"));x.addEventListener("mouseleave",()=>cursor.classList.remove("big"))});
+const toast=document.getElementById("toast");
+document.querySelectorAll(".portal").forEach(p=>{
+  p.addEventListener("click",()=>{toast.classList.add("toast-show");setTimeout(()=>toast.classList.remove("toast-show"),1200)});
+});
 
-const reveal=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");reveal.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll(".reveal").forEach(x=>reveal.observe(x));
-
-const navLinks=[...document.querySelectorAll(".navlinks a")],sections=[...document.querySelectorAll("header[id],section[id]")];
-const navObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)navLinks.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id))}),{threshold:.45});
-sections.forEach(x=>navObs.observe(x));
-
-addEventListener("scroll",()=>{const y=scrollY;document.querySelector(".hero-copy").style.transform=`translateY(${Math.min(y*.12,55)}px)`;document.querySelector(".hero-girl").style.transform=`translateY(${Math.min(y*.05,25)}px)`});
+let audioCtx,playing=false;
+document.getElementById("musicBtn").addEventListener("click",()=>{
+  if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+  if(playing){audioCtx.suspend();playing=false;document.getElementById("musicBtn").textContent="🎵 Play vibes";return}
+  audioCtx.resume();playing=true;document.getElementById("musicBtn").textContent="🎶 Vibes on!";
+  const notes=[523.25,659.25,783.99,659.25,587.33,698.46];
+  let i=0;
+  const play=()=>{
+    if(!playing)return;
+    const o=audioCtx.createOscillator(),g=audioCtx.createGain();
+    o.type="sine";o.frequency.value=notes[i++%notes.length];g.gain.setValueAtTime(.0001,audioCtx.currentTime);g.gain.exponentialRampToValueAtTime(.035,audioCtx.currentTime+.02);g.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+.22);
+    o.connect(g);g.connect(audioCtx.destination);o.start();o.stop(audioCtx.currentTime+.24);setTimeout(play,270);
+  };play();
+});
 </script>
 </body>
 </html>
