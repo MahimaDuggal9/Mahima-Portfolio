@@ -1,192 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Mahima Duggal — Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #0a0a0f;
-      color: #e0e0e0;
-    }
-    header {
-      background: linear-gradient(90deg, #3a0ca3, #7209b7, #4361ee);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header nav a {
-      color: #fff;
-      margin: 0 1rem;
-      text-decoration: none;
-      position: relative;
-    }
-    header nav a::after {
-      content: '';
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      bottom: -4px;
-      left: 0;
-      background-color: #4cc9f0;
-      transition: width 0.3s;
-    }
-    header nav a:hover::after { width: 100%; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahima Duggal | Software Engineer</title>
+<meta name="description" content="Mahima Duggal — Software Engineer specializing in Java, Spring Boot, Microservices, REST APIs, databases and scalable backend systems.">
+<meta name="theme-color" content="#05040c">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 5rem 10%;
-    }
-    .hero-text h1 {
-      font-size: 3.5rem;
-      background: linear-gradient(90deg, #4cc9f0, #f72585);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .hero-text h2 { font-size: 1.5rem; color: #fff; }
-    .hero-text p { max-width: 500px; color: #ccc; }
-    .hero-text button {
-      margin-top: 1rem;
-      padding: 0.8rem 1.5rem;
-      border: none;
-      border-radius: 6px;
-      background: #4cc9f0;
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .hero-text button:hover { background: #f72585; color: #fff; }
+:root{
+  --bg:#03030a;--panel:#080713;--panel2:#0c0a19;--line:#29243f;
+  --text:#f7f5ff;--muted:#aaa6b8;--purple:#963cff;--purple2:#bd63ff;
+  --blue:#36a4ff;--green:#6ee58b;--glow:rgba(132,45,255,.34);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;overflow-x:hidden}
+a{color:inherit}
+button,a{cursor:pointer}
+body:before{
+ content:"";position:fixed;inset:0;pointer-events:none;z-index:99;opacity:.045;
+ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")
+}
+body:after{
+ content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;
+ background:
+ radial-gradient(circle at 75% 12%,rgba(69,22,154,.18),transparent 25%),
+ radial-gradient(circle at 25% 65%,rgba(74,20,150,.10),transparent 28%),
+ linear-gradient(rgba(120,50,255,.035) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(120,50,255,.035) 1px,transparent 1px);
+ background-size:auto,auto,75px 75px,75px 75px
+}
+.container{width:min(1410px,calc(100% - 80px));margin:auto}
+header{
+ height:82px;position:absolute;top:0;left:0;right:0;z-index:20;
+ display:flex;align-items:center;justify-content:space-between;padding:0 5%;
+}
+.logo{text-decoration:none;display:flex;flex-direction:column;font-weight:900;line-height:.82}
+.logo .mark{font-size:30px;letter-spacing:-4px}.logo .word{font-size:13px;color:#a74cff;margin-top:6px}
+nav{display:flex;gap:42px;margin-left:8%}
+nav a{text-decoration:none;font-size:12px;color:#ddd9e7;position:relative;transition:.25s}
+nav a:hover,nav a.active{color:#fff}
+nav a.active:after{content:"";position:absolute;width:5px;height:5px;background:#a13dff;border-radius:50%;left:50%;bottom:-14px;box-shadow:0 0 13px #a13dff}
+.head-actions{display:flex;gap:12px;align-items:center}
+.icon{width:38px;height:38px;border:1px solid #28263a;border-radius:12px;display:grid;place-items:center;text-decoration:none;font-size:13px;font-weight:700}
+.hire,.primary{border:0;text-decoration:none;background:linear-gradient(110deg,#6721eb,#6121ff);box-shadow:0 10px 32px rgba(99,29,255,.3);border-radius:8px}
+.hire{padding:13px 21px;font-size:12px}.hire b{margin-left:15px}
+.hero{min-height:540px;position:relative;padding-top:114px;display:grid;grid-template-columns:44% 56%;align-items:start}
+.hero-copy{padding-left:6%;position:relative;z-index:5}
+.pill{display:inline-flex;align-items:center;gap:13px;border:1px solid #242230;border-radius:20px;padding:8px 17px 8px 12px;font:11px "JetBrains Mono";margin-bottom:14px}
+.pill i{width:8px;height:8px;border-radius:50%;background:#a643ff;box-shadow:0 0 12px #a643ff}
+h1{font-size:84px;line-height:.89;letter-spacing:1px;margin:0;font-weight:900}
+h1 span{color:#a246f4}
+.tag{font:14px "JetBrains Mono";margin:24px 0 14px}.tag span{color:#359dff}
+.hero-copy .desc{color:#b8b4c4;font-size:14px;line-height:1.55;margin:0}
+.actions{display:flex;gap:20px;margin-top:26px}.primary,.outline{padding:14px 23px;display:inline-flex;align-items:center;gap:23px;font-size:12px;text-decoration:none}
+.primary{color:#fff}.primary b{font-size:20px}.outline{border:1px solid #302d42;border-radius:8px}.outline:hover{background:#0e0b1c}
+.hero-art{height:425px;position:relative;margin-top:-5px}
+.arc{position:absolute;border:1px solid rgba(77,74,255,.65);border-radius:50%;transform:rotate(-19deg)}
+.arc.a{width:750px;height:320px;left:-80px;top:-35px}.arc.b{width:720px;height:270px;left:-15px;top:55px;border-color:rgba(156,56,255,.6)}
+.desk{
+ position:absolute;width:650px;height:230px;left:35px;top:130px;border:1px solid #4d3d79;border-radius:17px;
+ background:linear-gradient(145deg,#2a2247,#0c0b19 67%);transform:skewY(-8deg) rotate(-1deg);
+ box-shadow:0 30px 55px #000,0 0 0 2px rgba(91,37,255,.14),inset 0 0 55px rgba(82,41,255,.16)
+}
+.laptop{position:absolute;width:425px;height:290px;right:108px;top:-155px;transform:rotate(8deg);z-index:5}
+.screen{height:213px;border:10px solid #3d3b59;border-bottom-width:17px;border-radius:13px 13px 4px 4px;background:#080b16;padding:16px;box-shadow:0 0 35px rgba(61,54,255,.27)}
+.screen:before{content:"●";float:right;color:#866cff;font-size:8px}.code{font:7px/1.85 "JetBrains Mono";color:#50c6ff;clear:both;padding-top:5px}.code em{color:#bd6aff;font-style:normal}.code strong{color:#b9ff79;font-weight:500}.code i{color:#ffd56b;font-style:normal}
+.keyboard{height:76px;margin:0 -13px;background:linear-gradient(#4b4965,#191825);clip-path:polygon(4% 0,96% 0,100% 100%,0 100%);box-shadow:0 12px 18px #020207}
+.float{position:absolute;border:1px solid #44376c;background:linear-gradient(145deg,#17142d,#080713);border-radius:11px;display:grid;place-items:center;z-index:7;box-shadow:0 10px 35px rgba(58,17,125,.45)}
+.float small{font-size:8px;display:block;margin-top:4px}.spring{width:108px;height:90px;left:0;top:73px;transform:rotate(7deg);font-size:28px}.java{width:82px;height:112px;left:130px;top:12px;transform:rotate(7deg);font-size:28px}.codefloat{width:105px;height:86px;right:-6px;top:73px;transform:rotate(4deg);font:28px "JetBrains Mono";color:#4aa4ff}
+.headphones{position:absolute;left:232px;top:2px;width:110px;height:120px;border:17px solid #292e65;border-bottom-color:transparent;border-radius:55px 55px 25px 25px;z-index:6;box-shadow:0 0 23px #3929a8}
+.headphones:before,.headphones:after{content:"";position:absolute;top:52px;width:24px;height:50px;background:#363d78;border-radius:10px}.headphones:before{left:-27px}.headphones:after{right:-27px}
+.cup{position:absolute;z-index:8;left:90px;top:80px;width:78px;height:67px;border-radius:12px 12px 35px 35px;background:linear-gradient(90deg,#6570b3,#dce3ff);transform:rotate(5deg)}.cup:after{content:"";position:absolute;right:-25px;top:14px;width:29px;height:35px;border:8px solid #8d9be2;border-left:0;border-radius:0 20px 20px 0}
+.phone{position:absolute;z-index:9;left:135px;bottom:-4px;width:165px;height:70px;border:5px solid #171521;border-radius:16px;background:linear-gradient(135deg,#17132c,#353a80);transform:rotate(26deg);box-shadow:0 0 22px rgba(103,48,255,.55)}.phone:after{content:"";position:absolute;left:21px;bottom:16px;width:46px;height:5px;border-radius:5px;background:#6852ff}
+.plant{position:absolute;z-index:8;right:17px;top:93px;width:68px;height:84px}.plant:after{content:"";position:absolute;bottom:0;left:0;width:68px;height:47px;border-radius:8px 8px 22px 22px;background:linear-gradient(90deg,#7379ac,#272940)}.leaf{position:absolute;bottom:36px;left:29px;width:12px;height:50px;border-radius:100% 0 100% 0;background:#39945a;transform:rotate(-23deg);z-index:2}.leaf:nth-child(2){left:38px;transform:rotate(18deg)}.leaf:nth-child(3){left:20px;height:41px;transform:rotate(45deg)}
+.knob{position:absolute;z-index:8;right:125px;bottom:4px;width:70px;height:56px;background:#202137;border-radius:15px}.knob:after{content:"";display:block;width:38px;height:38px;margin:8px auto;border-radius:50%;background:#303653;border:5px solid #5a6286;box-shadow:0 0 16px #48a9ff}
+.dots{position:absolute;left:0;top:244px;display:grid;gap:14px}.dots b{width:8px;height:8px;border-radius:50%;background:#696b76}.dots b:first-child{width:15px;height:15px;border:2px solid #a043ff;background:transparent;box-shadow:0 0 9px #a043ff}
+.scroll{position:absolute;right:0;bottom:18px;color:#aaa;font-size:9px;display:flex;align-items:center;gap:9px}.scroll span{width:20px;height:28px;border:1px solid #555;border-radius:12px;display:grid;place-items:center}
+.techbar{min-height:69px;border-top:1px solid #47227f;border-bottom:1px solid #181629;background:rgba(5,4,14,.78);display:flex;align-items:center;justify-content:center;gap:44px;box-shadow:0 -5px 20px rgba(103,28,255,.09)}
+.techbar .label{font:11px "JetBrains Mono";color:#a44aff}.tech{font-size:12px;display:flex;align-items:center;gap:9px;color:#ddd}.tech b{font-size:20px}.terminal{border:1px solid #29263b;padding:3px 7px;border-radius:5px;color:#aaa}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1.42fr;gap:10px}.panel{border:1px solid #2b2840;border-radius:12px;background:radial-gradient(circle at 72% 20%,rgba(77,24,130,.17),transparent 38%),linear-gradient(145deg,#0c0a18,#04040d);position:relative;overflow:hidden}
+.info{padding:27px 24px;min-height:315px}.num{color:#a64aff;font:10px "JetBrains Mono";display:inline-block}.label{color:#a64aff;font:10px "JetBrains Mono";margin-left:14px}.panel h2{font-size:21px;line-height:1.35;font-weight:500;margin:24px 0 15px}.panel h2 strong{color:#a348f4}.panel p{font-size:11px;color:#c2becd;line-height:1.6}.more{display:inline-block;margin-top:13px;border:1px solid #353047;border-radius:8px;text-decoration:none;padding:11px 14px;font-size:10px}
+.about-art{position:absolute;right:15px;bottom:0;width:48%;height:235px}.avatar{position:absolute;right:27px;top:28px;width:108px;height:135px;background:linear-gradient(135deg,#292b61,#11132d);border-radius:50px 50px 35px 35px;box-shadow:0 0 28px rgba(104,43,255,.25)}.avatar:before{content:"";position:absolute;width:67px;height:70px;top:14px;left:21px;border-radius:50%;background:#efbfa8;box-shadow:0 0 0 8px #2a294c}.avatar:after{content:"";position:absolute;width:84px;height:31px;top:2px;left:12px;border-radius:60% 60% 0 0;background:#17162f}.mini-screen{position:absolute;right:-3px;top:0;width:108px;height:75px;border:1px solid #403663;border-radius:8px;background:#111123;padding:9px;font:7px "JetBrains Mono";color:#55c6ff;transform:rotate(-2deg)}.hood{position:absolute;right:3px;bottom:13px;width:140px;height:78px;border-radius:70px 70px 10px 10px;background:#171b43;box-shadow:inset 12px 0 #22285a;transform:rotate(-5deg)}
+.skills{padding:27px 24px;min-height:315px}.skill-wrap{display:grid;grid-template-columns:56% 44%;margin-top:20px}.skill h2{margin:0 0 20px}.meter{margin-bottom:13px}.meter label{display:flex;justify-content:space-between;font-size:9px;margin-bottom:6px;color:#ddd}.meter i{display:block;height:4px;width:var(--w);border-radius:5px;background:linear-gradient(90deg,#9138ff,#b050ff);box-shadow:0 0 9px rgba(145,50,255,.55)}
+.stack-art{height:230px;position:relative}.layer{position:absolute;left:15px;width:150px;height:34px;border:1px solid #2d4d90;background:#11193b;transform:skewX(-20deg);box-shadow:0 12px 18px #000}.layer.l1{top:135px}.layer.l2{top:102px}.layer.l3{top:69px}.cube{position:absolute;width:54px;height:54px;border:1px solid #4e4282;border-radius:7px;background:#111020;display:grid;place-items:center;box-shadow:0 0 20px rgba(83,37,255,.25)}.cube.j{left:5px;top:25px}.cube.s{left:75px;top:0}.cube.a{right:4px;top:45px;font:9px "JetBrains Mono";color:#70a9ff}.db{position:absolute;left:66px;top:101px;width:50px;height:50px;border-radius:50%;display:grid;place-items:center;background:#152b5b;border:4px solid #2b73ff;color:#5fc8ff;box-shadow:0 0 22px #315dff}
+.projects{padding:27px 18px 17px;min-height:315px}.project-title{display:flex;justify-content:space-between;align-items:flex-start;padding:0 6px 14px}.project-title h2{margin:22px 0 0}.view{font-size:10px;text-decoration:none;margin-top:23px;display:flex;align-items:center;gap:9px}.view span{width:28px;height:28px;border:1px solid #7132bc;border-radius:50%;display:grid;place-items:center;color:#b85cff}.project-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.project{border:1px solid #2e2944;border-radius:9px;overflow:hidden;background:#090914;transition:.3s}.project:hover{transform:translateY(-5px);border-color:#7144b5;box-shadow:0 12px 35px rgba(85,26,175,.22)}.project-img{height:112px;display:grid;place-items:center;position:relative;background:linear-gradient(145deg,#12195b,#080817)}.project-img:before{content:"";width:76%;height:60%;border:1px solid #5661ff;border-radius:5px;transform:skewY(-7deg);box-shadow:0 0 25px rgba(64,70,255,.32)}.project-img span{position:absolute;font-size:23px;color:#65a7ff}.project:nth-child(2) .project-img:before{border-color:#a143ff}.project:nth-child(3) .project-img:before{border-color:#3e8cff}.project:nth-child(4) .project-img:before{border-color:#7145ff}.project h3{font-size:11px;font-weight:500;margin:10px 11px 4px}.project p{font-size:9px;line-height:1.45;color:#a8a4b3;margin:0 11px 12px}
 
-    section {
-      padding: 4rem 10%;
-    }
-    section h2 {
-      font-size: 2rem;
-      color: #4cc9f0;
-      margin-bottom: 1rem;
-    }
-    .skills-bar {
-      background: #222;
-      border-radius: 6px;
-      margin: 1rem 0;
-      overflow: hidden;
-    }
-    .skills-bar span {
-      display: block;
-      height: 20px;
-      background: linear-gradient(90deg, #4cc9f0, #f72585);
-    }
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-    .project-card {
-      background: #111;
-      border: 1px solid #4cc9f0;
-      border-radius: 10px;
-      padding: 1.5rem;
-      transition: transform 0.3s;
-    }
-    .project-card:hover { transform: translateY(-10px); border-color: #f72585; }
-
-    footer {
-      background: #111;
-      text-align: center;
-      padding: 2rem;
-      color: #777;
-    }
-  </style>
+.project-topline{padding:27px 24px 0}
+.project-hero{display:grid;grid-template-columns:36% 64%;min-height:365px;padding:25px 24px 18px;gap:12px}
+.project-copy{padding:28px 12px 10px 4px;position:relative;z-index:3}
+.project-kicker{font:10px "JetBrains Mono";color:#8d89a1;letter-spacing:1.2px;margin-bottom:12px}
+.project-copy h2{font-size:39px;line-height:1.05;margin:0 0 15px;font-weight:700}
+.project-copy h2 strong{color:#a348f4}
+.project-copy p{font-size:12px;line-height:1.7;color:#aaa6b8;max-width:390px}
+.project-tech{display:flex;flex-wrap:wrap;gap:7px;margin:20px 0 25px}
+.project-tech span{border:1px solid #332d4a;border-radius:20px;padding:6px 9px;color:#c7c2d2;font-size:8px;background:#0a0914}
+.computer-scene{position:relative;min-height:350px;overflow:hidden;border-radius:15px;background:radial-gradient(circle at 52% 42%,rgba(101,39,224,.22),transparent 31%),linear-gradient(145deg,#090817,#04040c);border:1px solid #25213a}
+.computer-scene:before,.computer-scene:after{content:"";position:absolute;border:1px solid rgba(119,55,255,.35);border-radius:50%;width:560px;height:220px;left:50%;top:40%;transform:translate(-50%,-50%) rotate(-13deg)}
+.computer-scene:after{width:640px;height:250px;border-color:rgba(50,118,255,.25);transform:translate(-50%,-50%) rotate(14deg)}
+.screen-glow{position:absolute;width:300px;height:220px;left:50%;top:42px;transform:translateX(-50%);background:#6930ff;filter:blur(70px);opacity:.17}
+.monitor{position:absolute;width:400px;height:245px;left:50%;top:35px;transform:translateX(-50%) perspective(500px) rotateY(-5deg);background:#111321;border:10px solid #373751;border-bottom-width:16px;border-radius:12px;box-shadow:0 25px 45px #000,0 0 28px rgba(75,48,255,.35);z-index:4}
+.monitor-top{height:25px;background:#17192a;display:flex;align-items:center;padding:0 9px;gap:5px;border-bottom:1px solid #2e3048}
+.monitor-top span{width:5px;height:5px;border-radius:50%;background:#7c6cff}.monitor-top b{font:7px "JetBrains Mono";font-weight:400;color:#858399;margin-left:auto;margin-right:8px}
+.monitor-code{padding:14px 18px;font:8px/1.75 "JetBrains Mono";color:#55bfff}
+.monitor-code i{font-style:normal;color:#d16cff}.monitor-code em{font-style:normal;color:#ffd36c}.monitor-code strong{font-weight:400;color:#8dff80}.cursor{color:#b35aff;animation:blink .8s infinite}
+.monitor-stand{position:absolute;bottom:-55px;left:50%;transform:translateX(-50%);width:70px;height:60px;background:linear-gradient(90deg,#25263a,#4a4b65,#25263a);clip-path:polygon(35% 0,65% 0,100% 100%,0 100%)}
+.desk-wide{position:absolute;left:7%;right:7%;bottom:36px;height:64px;border-radius:7px;background:linear-gradient(145deg,#25203d,#0c0b18);border:1px solid #40325e;transform:skewX(-12deg);box-shadow:0 22px 35px #000,0 0 25px rgba(85,31,255,.18);z-index:3}
+.keyboard-wide{position:absolute;left:31%;bottom:48px;width:220px;height:28px;z-index:5;background:repeating-linear-gradient(90deg,#33334a 0 10px,#171726 10px 12px),#22223a;transform:skewX(-15deg);border-radius:4px;border:1px solid #55506b}
+.mouse{position:absolute;right:17%;bottom:46px;width:34px;height:26px;border-radius:15px 15px 13px 13px;background:#25273d;border:1px solid #595873;z-index:5;box-shadow:0 0 12px rgba(75,139,255,.35)}
+.mouse:after{content:"";position:absolute;left:50%;top:4px;width:2px;height:7px;background:#75a9ff}
+.coffee{position:absolute;left:12%;bottom:65px;font-size:30px;z-index:6;filter:drop-shadow(0 0 12px rgba(161,77,255,.4));animation:float 3s ease-in-out infinite}
+.floating-chip{position:absolute;z-index:8;width:70px;height:70px;border:1px solid #3e3760;border-radius:10px;background:linear-gradient(145deg,#17142c,#080713);display:grid;place-items:center;align-content:center;color:#70a9ff;font:20px "JetBrains Mono";box-shadow:0 10px 25px #000,0 0 18px rgba(103,44,255,.25);animation:float 4s ease-in-out infinite}
+.floating-chip small{font:7px Inter;color:#aaa6b7;margin-top:4px}.chip-java{left:7%;top:80px}.chip-api{right:8%;top:55px;animation-delay:-1.3s}.chip-db{right:14%;bottom:70px;animation-delay:-2.2s;color:#58d6a0}
+.scanline{position:absolute;left:0;right:0;height:2px;background:#9b48ff;opacity:.25;box-shadow:0 0 12px #9b48ff;animation:scan 4.5s linear infinite;z-index:9}
+.large-project-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:4px 24px 24px}
+.large-project-card{position:relative;min-height:160px;padding:20px 18px 17px 56px;border:1px solid #2e2944;border-radius:10px;background:linear-gradient(145deg,#0c0a19,#06060f);transition:.3s;overflow:hidden}
+.large-project-card:after{content:"";position:absolute;inset:auto -20% -60% 20%;height:100px;background:#722bff;filter:blur(50px);opacity:.08}
+.large-project-card:hover{transform:translateY(-5px);border-color:#7144b5;box-shadow:0 15px 40px rgba(85,26,175,.22)}
+.lp-number{position:absolute;left:17px;top:18px;color:#8740d9;font:9px "JetBrains Mono"}.lp-icon{position:absolute;left:15px;top:52px;width:27px;height:27px;border:1px solid #513d83;border-radius:7px;display:grid;place-items:center;color:#68a7ff;font-size:13px;background:#100d20}
+.large-project-card h3{font-size:13px;margin:32px 0 7px}.large-project-card p{font-size:9px;line-height:1.55;color:#aaa6b5;margin:0 0 14px}.lp-stack{font:7px "JetBrains Mono";color:#9b51ff;letter-spacing:.5px}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}@keyframes scan{0%{top:0}100%{top:100%}}@keyframes blink{50%{opacity:0}}
+.stats{width:min(730px,calc(100% - 80px));margin:21px auto 0;min-height:79px;border:1px solid #28253a;border-radius:12px;background:#080712;display:grid;grid-template-columns:repeat(3,1fr);align-items:center;padding:0 28px;gap:25px}.stat{display:flex;gap:15px;align-items:center}.stat>span{width:40px;height:40px;border-radius:50%;border:1px solid #6c36e5;display:grid;place-items:center;color:#b359ff;box-shadow:0 0 18px rgba(106,45,255,.25)}.stat b{display:block;color:#a44aff;font-size:17px;font-weight:500}.stat small{color:#c0bdc8;font-size:9px}
+section:not(.hero):not(.techbar){scroll-margin-top:25px}
+.expanded{margin-top:22px}.wide{padding:38px 35px}.wide h2{margin:10px 0 12px;font-size:28px}.wide p{max-width:900px}.columns{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:25px}.mini-card{border:1px solid #29253c;border-radius:10px;padding:20px;background:rgba(11,9,23,.8)}.mini-card h3{font-size:14px;margin:0 0 9px}.mini-card p{font-size:10px;margin:0}.timeline{margin-top:25px;border-left:1px solid #6132a2;padding-left:25px}.job{position:relative;padding-bottom:28px}.job:before{content:"";position:absolute;left:-31px;top:3px;width:10px;height:10px;border-radius:50%;background:#9d40ff;box-shadow:0 0 12px #9d40ff}.job h3{font-size:14px;margin:0}.job small{color:#a64aff;font:10px "JetBrains Mono"}.job p{margin-top:8px}
+.contact{padding:50px 0}.contact-card{text-align:center;padding:48px;border:1px solid #2c2842;border-radius:14px;background:radial-gradient(circle at 50% 0,rgba(91,31,184,.22),transparent 52%)}.contact-card h2{font-size:31px;line-height:1.2;margin:17px 0 10px}.contact-card p{font-size:12px;color:#aaa6b4;margin-bottom:25px}
+footer{text-align:center;padding:25px;border-top:1px solid #171526;color:#6e697a;font-size:10px}
+.reveal{opacity:0;transform:translateY(20px);transition:.65s}.reveal.show{opacity:1;transform:none}
+@media(max-width:1100px){nav{gap:23px;margin-left:2%}.hero{grid-template-columns:48% 52%}h1{font-size:68px}.hero-art{transform:scale(.85);transform-origin:left top}.grid3{grid-template-columns:1fr 1fr}.projects{grid-column:1/-1}.project-hero{grid-template-columns:1fr 1.35fr}.large-project-grid{grid-template-columns:repeat(2,1fr)}.techbar{gap:20px}.tech:nth-of-type(n+7){display:none}}
+@media(max-width:760px){header{height:70px;padding:0 18px}.nav{display:none}.head-actions .icon{display:none}.container{width:calc(100% - 28px)}.hero{display:block;padding-top:100px;min-height:900px}.hero-copy{padding-left:0}h1{font-size:56px}.tag{font-size:10px;line-height:1.6}.hero-art{transform:scale(.64);transform-origin:top left;margin:35px 0 0 4%;height:360px}.dots,.scroll{display:none}.techbar{flex-wrap:wrap;padding:13px;gap:13px;min-height:80px}.techbar .label{width:100%;text-align:center}.grid3{grid-template-columns:1fr}.projects{grid-column:auto}.project-hero{grid-template-columns:1fr}.computer-scene{min-height:330px}.large-project-grid{grid-template-columns:1fr}.project-copy{padding-left:0}.project-copy h2{font-size:32px}.project-grid{grid-template-columns:1fr 1fr}
+.project-topline{padding:27px 24px 0}
+.project-hero{display:grid;grid-template-columns:36% 64%;min-height:365px;padding:25px 24px 18px;gap:12px}
+.project-copy{padding:28px 12px 10px 4px;position:relative;z-index:3}
+.project-kicker{font:10px "JetBrains Mono";color:#8d89a1;letter-spacing:1.2px;margin-bottom:12px}
+.project-copy h2{font-size:39px;line-height:1.05;margin:0 0 15px;font-weight:700}
+.project-copy h2 strong{color:#a348f4}
+.project-copy p{font-size:12px;line-height:1.7;color:#aaa6b8;max-width:390px}
+.project-tech{display:flex;flex-wrap:wrap;gap:7px;margin:20px 0 25px}
+.project-tech span{border:1px solid #332d4a;border-radius:20px;padding:6px 9px;color:#c7c2d2;font-size:8px;background:#0a0914}
+.computer-scene{position:relative;min-height:350px;overflow:hidden;border-radius:15px;background:radial-gradient(circle at 52% 42%,rgba(101,39,224,.22),transparent 31%),linear-gradient(145deg,#090817,#04040c);border:1px solid #25213a}
+.computer-scene:before,.computer-scene:after{content:"";position:absolute;border:1px solid rgba(119,55,255,.35);border-radius:50%;width:560px;height:220px;left:50%;top:40%;transform:translate(-50%,-50%) rotate(-13deg)}
+.computer-scene:after{width:640px;height:250px;border-color:rgba(50,118,255,.25);transform:translate(-50%,-50%) rotate(14deg)}
+.screen-glow{position:absolute;width:300px;height:220px;left:50%;top:42px;transform:translateX(-50%);background:#6930ff;filter:blur(70px);opacity:.17}
+.monitor{position:absolute;width:400px;height:245px;left:50%;top:35px;transform:translateX(-50%) perspective(500px) rotateY(-5deg);background:#111321;border:10px solid #373751;border-bottom-width:16px;border-radius:12px;box-shadow:0 25px 45px #000,0 0 28px rgba(75,48,255,.35);z-index:4}
+.monitor-top{height:25px;background:#17192a;display:flex;align-items:center;padding:0 9px;gap:5px;border-bottom:1px solid #2e3048}
+.monitor-top span{width:5px;height:5px;border-radius:50%;background:#7c6cff}.monitor-top b{font:7px "JetBrains Mono";font-weight:400;color:#858399;margin-left:auto;margin-right:8px}
+.monitor-code{padding:14px 18px;font:8px/1.75 "JetBrains Mono";color:#55bfff}
+.monitor-code i{font-style:normal;color:#d16cff}.monitor-code em{font-style:normal;color:#ffd36c}.monitor-code strong{font-weight:400;color:#8dff80}.cursor{color:#b35aff;animation:blink .8s infinite}
+.monitor-stand{position:absolute;bottom:-55px;left:50%;transform:translateX(-50%);width:70px;height:60px;background:linear-gradient(90deg,#25263a,#4a4b65,#25263a);clip-path:polygon(35% 0,65% 0,100% 100%,0 100%)}
+.desk-wide{position:absolute;left:7%;right:7%;bottom:36px;height:64px;border-radius:7px;background:linear-gradient(145deg,#25203d,#0c0b18);border:1px solid #40325e;transform:skewX(-12deg);box-shadow:0 22px 35px #000,0 0 25px rgba(85,31,255,.18);z-index:3}
+.keyboard-wide{position:absolute;left:31%;bottom:48px;width:220px;height:28px;z-index:5;background:repeating-linear-gradient(90deg,#33334a 0 10px,#171726 10px 12px),#22223a;transform:skewX(-15deg);border-radius:4px;border:1px solid #55506b}
+.mouse{position:absolute;right:17%;bottom:46px;width:34px;height:26px;border-radius:15px 15px 13px 13px;background:#25273d;border:1px solid #595873;z-index:5;box-shadow:0 0 12px rgba(75,139,255,.35)}
+.mouse:after{content:"";position:absolute;left:50%;top:4px;width:2px;height:7px;background:#75a9ff}
+.coffee{position:absolute;left:12%;bottom:65px;font-size:30px;z-index:6;filter:drop-shadow(0 0 12px rgba(161,77,255,.4));animation:float 3s ease-in-out infinite}
+.floating-chip{position:absolute;z-index:8;width:70px;height:70px;border:1px solid #3e3760;border-radius:10px;background:linear-gradient(145deg,#17142c,#080713);display:grid;place-items:center;align-content:center;color:#70a9ff;font:20px "JetBrains Mono";box-shadow:0 10px 25px #000,0 0 18px rgba(103,44,255,.25);animation:float 4s ease-in-out infinite}
+.floating-chip small{font:7px Inter;color:#aaa6b7;margin-top:4px}.chip-java{left:7%;top:80px}.chip-api{right:8%;top:55px;animation-delay:-1.3s}.chip-db{right:14%;bottom:70px;animation-delay:-2.2s;color:#58d6a0}
+.scanline{position:absolute;left:0;right:0;height:2px;background:#9b48ff;opacity:.25;box-shadow:0 0 12px #9b48ff;animation:scan 4.5s linear infinite;z-index:9}
+.large-project-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:4px 24px 24px}
+.large-project-card{position:relative;min-height:160px;padding:20px 18px 17px 56px;border:1px solid #2e2944;border-radius:10px;background:linear-gradient(145deg,#0c0a19,#06060f);transition:.3s;overflow:hidden}
+.large-project-card:after{content:"";position:absolute;inset:auto -20% -60% 20%;height:100px;background:#722bff;filter:blur(50px);opacity:.08}
+.large-project-card:hover{transform:translateY(-5px);border-color:#7144b5;box-shadow:0 15px 40px rgba(85,26,175,.22)}
+.lp-number{position:absolute;left:17px;top:18px;color:#8740d9;font:9px "JetBrains Mono"}.lp-icon{position:absolute;left:15px;top:52px;width:27px;height:27px;border:1px solid #513d83;border-radius:7px;display:grid;place-items:center;color:#68a7ff;font-size:13px;background:#100d20}
+.large-project-card h3{font-size:13px;margin:32px 0 7px}.large-project-card p{font-size:9px;line-height:1.55;color:#aaa6b5;margin:0 0 14px}.lp-stack{font:7px "JetBrains Mono";color:#9b51ff;letter-spacing:.5px}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}@keyframes scan{0%{top:0}100%{top:100%}}@keyframes blink{50%{opacity:0}}
+.stats{width:calc(100% - 28px);grid-template-columns:1fr;padding:18px;gap:16px}.about-art,.stack-art{display:none}.skill-wrap{grid-template-columns:1fr}.columns{grid-template-columns:1fr}.contact-card{padding:34px 18px}.contact-card h2{font-size:24px}}
+</style>
 </head>
 <body>
-  <header>
-    <div class="logo">Mahima Duggal</div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <section class="hero" id="home">
-    <div class="hero-text">
-      <h2>Software Engineer</h2>
-      <h1>Mahima Duggal</h1>
-      <p>I build scalable backend systems & digital solutions. Specializing in Java, Spring Boot and Microservices. Turning ideas into high-performance applications.</p>
-      <button>Explore My Work</button>
-      <button>Download CV</button>
+<header>
+  <a class="logo" href="#home"><span class="mark">{J$}</span><span class="word">MASTERY</span></a>
+  <nav>
+    <a class="active" href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#skills">SKILLS</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#experience">EXPERIENCE</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+  <div class="head-actions">
+    <a class="icon" href="https://leetcode.com/u/Mahimaduggal/" target="_blank" aria-label="LeetCode">LC</a>
+    <a class="icon" href="https://github.com/MahimaDuggal9" target="_blank" aria-label="GitHub">◉</a>
+    <a class="icon" href="https://www.linkedin.com/in/mahima-duggal-05b2a225/" target="_blank" aria-label="LinkedIn">in</a>
+    <a class="hire" href="#contact">Hire Me <b>➤</b></a>
+  </div>
+</header>
+
+<main>
+<section id="home" class="hero container">
+  <div class="hero-copy">
+    <div class="pill"><i></i> SOFTWARE ENGINEER</div>
+    <h1>MAHIMA<br><span>DUGGAL</span></h1>
+    <p class="tag">I BUILD SCALABLE BACKEND SYSTEMS <span>&amp; DIGITAL SOLUTIONS</span></p>
+    <p class="desc">Specializing in Java, Spring Boot and Microservices.<br>Turning ideas into high-performance, maintainable applications.</p>
+    <div class="actions">
+      <a class="primary" href="#projects">Explore My Work <b>→</b></a>
+      <a class="outline" href="#" onclick="downloadCV(event)">Download CV <b>⇩</b></a>
     </div>
-    <div class="hero-visual">
-      <!-- Placeholder for 3D workspace (Three.js canvas or imported model) -->
-      <canvas id="workspace"></canvas>
+  </div>
+  <div class="hero-art">
+    <div class="arc a"></div><div class="arc b"></div>
+    <div class="float spring">🌱<small>SPRING BOOT</small></div>
+    <div class="float java">☕<small>JAVA</small></div>
+    <div class="float codefloat">&lt;/&gt;</div>
+    <div class="headphones"></div>
+    <div class="desk">
+      <div class="laptop"><div class="screen"><div class="code">
+        <span><em>public</em> class <strong>Application</strong> {</span><br>
+        <span>&nbsp;&nbsp;<em>private</em> String api = <i>"/v1/users"</i>;</span><br>
+        <span>&nbsp;&nbsp;<em>public</em> Response getUsers() {</span><br>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;<strong>return</strong> service.fetch();</span><br>
+        <span>&nbsp;&nbsp;}</span><br><span>}</span>
+      </div></div><div class="keyboard"></div></div>
+      <div class="cup"></div><div class="phone"></div>
+      <div class="plant"><i class="leaf"></i><i class="leaf"></i><i class="leaf"></i></div>
+      <div class="knob"></div>
     </div>
-  </section>
+  </div>
+  <div class="dots"><b></b><b></b><b></b><b></b><b></b><b></b></div>
+  <div class="scroll">Scroll<br>Down <span>↓</span></div>
+</section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Problem Solver. Code Crafter. I’m Mahima Duggal, a passionate Software Engineer who loves building efficient, scalable and impactful solutions.</p>
-  </section>
+<div class="techbar">
+  <div class="label">I WORK WITH</div>
+  <div class="tech"><b>☕</b> Java</div>
+  <div class="tech"><b>🌱</b> Spring Boot</div>
+  <div class="tech"><b>◉</b> MySQL</div>
+  <div class="tech"><b>◆</b> MongoDB</div>
+  <div class="tech"><b>aws</b> AWS</div>
+  <div class="tech"><b>◉</b> Docker</div>
+  <div class="tech"><b>◆</b> Git</div>
+  <div class="tech"><b>◈</b> Kubernetes</div>
+  <div class="terminal">›_</div>
+</div>
 
-  <section id="skills">
-    <h2>My Technical Expertise</h2>
-    <div class="skills-bar"><span style="width:95%"></span></div> Java & Spring Boot — 95%
-    <div class="skills-bar"><span style="width:90%"></span></div> Microservices — 90%
-    <div class="skills-bar"><span style="width:85%"></span></div> Database Design — 85%
-    <div class="skills-bar"><span style="width:92%"></span></div> REST APIs — 92%
-  </section>
+<section class="container grid3" style="padding-top:0">
+  <article id="about" class="panel info reveal">
+    <div><span class="num">01</span><span class="label">ABOUT ME</span></div>
+    <h2>Problem Solver.<br><strong>Code Crafter.</strong></h2>
+    <p>I'm Mahima Duggal, a passionate Software Engineer who enjoys turning complex requirements into clean, scalable and reliable software. I focus on backend engineering, API design, distributed systems and practical problem solving.</p>
+    <p>I care about readable code, performance, maintainability, testing and building products that are genuinely useful.</p>
+    <a class="more" href="#about-more">♙ &nbsp; More About Me</a>
+    <div class="about-art"><div class="mini-screen">const backend = <b>ready</b>;<br>API → services → DB</div><div class="avatar"></div><div class="hood"></div></div>
+  </article>
 
-  <section id="projects">
-    <h2>Some Things I’ve Built</h2>
-    <div class="projects">
-      <div class="project-card"><h3>FlexVote</h3><p>Secure online voting platform.</p></div>
-      <div class="project-card"><h3>BuzzTalk</h3><p>Real-time communication platform.</p></div>
-      <div class="project-card"><h3>FocusFeed</h3><p>News/content sharing platform.</p></div>
-      <div class="project-card"><h3>Assessment Portal</h3><p>Assessment management system.</p></div>
+  <article id="skills" class="panel skills reveal">
+    <div><span class="num">02</span><span class="label">MY SKILLS</span></div>
+    <div class="skill-wrap">
+      <div class="skill">
+        <h2>My Technical<br><strong>Expertise</strong></h2>
+        <div class="meter"><label>Java &amp; Spring Boot <b>95%</b></label><i style="--w:95%"></i></div>
+        <div class="meter"><label>Microservices <b>90%</b></label><i style="--w:90%"></i></div>
+        <div class="meter"><label>Database Design <b>85%</b></label><i style="--w:85%"></i></div>
+        <div class="meter"><label>REST APIs <b>92%</b></label><i style="--w:92%"></i></div>
+        <div class="meter"><label>Git / CI-CD <b>88%</b></label><i style="--w:88%"></i></div>
+      </div>
+      <div class="stack-art">
+        <div class="layer l1"></div><div class="layer l2"></div><div class="layer l3"></div>
+        <div class="cube j">☕</div><div class="cube s">🌱</div><div class="cube a">API</div><div class="db">▤</div>
+      </div>
     </div>
-  </section>
+  </article>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <p>4+ Years Experience · 4+ Projects Completed · 10+ Technologies</p>
-  </section>
+  <article id="projects" class="panel projects reveal">
+    <div class="project-topline"><span class="num">03</span><span class="label">FEATURED PROJECTS</span></div>
+    <div class="project-hero">
+      <div class="project-copy">
+        <div class="project-kicker">SELECTED WORK</div>
+        <h2>Things I've <strong>Built.</strong></h2>
+        <p>Real-world backend-focused projects combining Java, Spring Boot, REST APIs, databases and clean application architecture.</p>
+        <div class="project-tech">
+          <span>Java</span><span>Spring Boot</span><span>REST APIs</span><span>MySQL</span><span>MongoDB</span><span>Microservices</span>
+        </div>
+        <a class="primary" href="#project-list">Explore Projects <b>→</b></a>
+      </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>GitHub · LinkedIn · LeetCode</p>
-  </section>
+      <div class="computer-scene" aria-label="Animated developer computer illustration">
+        <div class="screen-glow"></div>
+        <div class="monitor">
+          <div class="monitor-top"><span></span><span></span><span></span><b>mahima.dev — projects</b></div>
+          <div class="monitor-code">
+            <div><i>const</i> projects = [</div>
+            <div>&nbsp;&nbsp;{ name: <em>"FlexVote"</em>,</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;stack: <strong>"Spring Boot"</strong> },</div>
+            <div>&nbsp;&nbsp;{ name: <em>"BuzzTalk"</em>,</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;stack: <strong>"Microservices"</strong> },</div>
+            <div>&nbsp;&nbsp;{ name: <em>"FocusFeed"</em>,</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;stack: <strong>"REST API"</strong> }</div>
+            <div>];</div>
+            <div class="cursor">▌</div>
+          </div>
+          <div class="monitor-stand"></div>
+        </div>
+        <div class="desk-wide"></div>
+        <div class="keyboard-wide"></div>
+        <div class="mouse"></div>
+        <div class="coffee">☕</div>
+        <div class="floating-chip chip-java">☕<small>JAVA</small></div>
+        <div class="floating-chip chip-api">&lt;/&gt;<small>API</small></div>
+        <div class="floating-chip chip-db">▤<small>DATABASE</small></div>
+        <div class="scanline"></div>
+      </div>
+    </div>
 
-  <footer>
-    © 2026 Mahima Duggal — Made with coffee ☕ & code 💻
-  </footer>
+    <div id="project-list" class="large-project-grid">
+      <div class="large-project-card">
+        <div class="lp-number">01</div>
+        <div class="lp-icon">✓</div>
+        <div><h3>FlexVote</h3><p>Secure online voting platform designed around authentication, authorization, validation and reliable backend workflows.</p></div>
+        <span class="lp-stack">JAVA · SPRING BOOT · REST</span>
+      </div>
+      <div class="large-project-card">
+        <div class="lp-number">02</div>
+        <div class="lp-icon">•••</div>
+        <div><h3>BuzzTalk</h3><p>Communication platform exploring clean APIs, service separation, persistent data and scalable application structure.</p></div>
+        <span class="lp-stack">MICROSERVICES · API · DB</span>
+      </div>
+      <div class="large-project-card">
+        <div class="lp-number">03</div>
+        <div class="lp-icon">◈</div>
+        <div><h3>FocusFeed</h3><p>Content sharing platform built around structured data, reusable backend services and a focused user experience.</p></div>
+        <span class="lp-stack">SPRING BOOT · MONGODB</span>
+      </div>
+      <div class="large-project-card">
+        <div class="lp-number">04</div>
+        <div class="lp-icon">⌘</div>
+        <div><h3>Assessment Portal</h3><p>Assessment management system covering tests, questions, users, results and administrative workflows.</p></div>
+        <span class="lp-stack">JAVA · MYSQL · REST</span>
+      </div>
+    </div>
+  </article>
+</section>
 
-  <!-- Three.js script for workspace visuals -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script>
-    // Example: rotating cube placeholder for workspace
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, 400/300, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({canvas: document.getElementById('workspace')});
-    renderer.setSize(400, 300);
-    const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshBasicMaterial({color: 0x4cc9f0, wireframe: true});
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
-    camera.position.z = 5;
-    function animate() {
-      requestAnimationFrame(animate);
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
-      renderer.render(scene, camera);
-    }
-    animate();
-  </script>
+<section id="about-more" class="container expanded reveal">
+  <div class="panel wide">
+    <span class="num">ABOUT</span><span class="label">BEYOND THE HERO SECTION</span>
+    <h2>Building software with <strong>purpose, structure &amp; scale.</strong></h2>
+    <p>I enjoy working across the complete backend journey — understanding a requirement, designing the data model, exposing APIs, implementing business logic, integrating services and thinking through deployment and observability. My strongest interests are Java ecosystems, Spring Boot, microservices and database-backed applications.</p>
+    <div class="columns">
+      <div class="mini-card"><h3>Backend Engineering</h3><p>Clean service layers, modular architecture, validation, exception handling and production-friendly APIs.</p></div>
+      <div class="mini-card"><h3>System Thinking</h3><p>Breaking large problems into manageable services, defining boundaries and designing for maintainability.</p></div>
+      <div class="mini-card"><h3>Problem Solving</h3><p>Debugging, optimizing queries, improving API behavior and finding simple solutions to complicated requirements.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="container expanded reveal">
+  <div class="panel wide">
+    <span class="num">04</span><span class="label">EXPERIENCE &amp; JOURNEY</span>
+    <h2>Growing from <strong>code to systems.</strong></h2>
+    <p>My engineering journey is centered on continuously improving the way software is designed, built and delivered.</p>
+    <div class="timeline">
+      <div class="job"><h3>Software Engineering</h3><small>JAVA · SPRING BOOT · BACKEND</small><p>Developing maintainable application services, REST APIs and database-backed features with an emphasis on quality and reliability.</p></div>
+      <div class="job"><h3>Project Building</h3><small>MICROSERVICES · DATABASES · APIs</small><p>Turning product ideas into working systems and learning through architecture, implementation, debugging and iteration.</p></div>
+      <div class="job"><h3>Continuous Learning</h3><small>DSA · SYSTEM DESIGN · CLOUD · DEVOPS</small><p>Expanding engineering depth through problem solving, scalable architecture and modern development practices.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="stats reveal">
+  <div class="stat"><span>◷</span><div><b>1+</b><small>Years Experience</small></div></div>
+  <div class="stat"><span>♧</span><div><b>4+</b><small>Projects Completed</small></div></div>
+  <div class="stat"><span>✣</span><div><b>10+</b><small>Technologies</small></div></div>
+</section>
+
+<section id="contact" class="container contact reveal">
+  <div class="contact-card">
+    <span class="num">05</span><span class="label">GET IN TOUCH</span>
+    <h2>Let's build something<br><strong>great together.</strong></h2>
+    <p>Have a project, opportunity or idea? I'd love to hear from you.</p>
+    <a class="primary" href="mailto:hello@example.com">Start a Conversation <b>→</b></a>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 Mahima Duggal · Built with HTML, CSS, JavaScript &amp; caffeine.</footer>
+
+<script>
+const links=[...document.querySelectorAll('nav a')];
+const sections=[...document.querySelectorAll('section[id]')];
+const io=new IntersectionObserver(entries=>{
+ entries.forEach(e=>{
+   if(e.isIntersecting){
+     links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));
+   }
+ });
+},{threshold:.42});
+sections.forEach(s=>io.observe(s));
+
+const revealIO=new IntersectionObserver(entries=>{
+ entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(x=>revealIO.observe(x));
+
+function downloadCV(e){
+ e.preventDefault();
+ const cv=`MAHIMA DUGGAL
+SOFTWARE ENGINEER
+
+Specialization:
+Java | Spring Boot | Microservices | REST APIs | MySQL | MongoDB | Docker | Git | Kubernetes
+
+Profile:
+Software Engineer focused on scalable backend systems, clean architecture and practical problem solving.
+
+Projects:
+FlexVote
+BuzzTalk
+FocusFeed
+Assessment Portal
+
+Contact:
+hello@example.com
+`;
+ const blob=new Blob([cv],{type:'text/plain'});
+ const url=URL.createObjectURL(blob);
+ const a=document.createElement('a');
+ a.href=url;a.download='Mahima-Duggal-CV.txt';a.click();
+ URL.revokeObjectURL(url);
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+ a.addEventListener('click',e=>{
+   const id=a.getAttribute('href');
+   if(id && id!=='#'){
+     const el=document.querySelector(id);
+     if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});}
+   }
+ });
+});
+</script>
 </body>
 </html>
