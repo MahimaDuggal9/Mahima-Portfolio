@@ -4,71 +4,101 @@
   <meta charset="UTF-8">
   <title>🎀 Mahima's World</title>
   <style>
+    /* Base */
     body {
       font-family: 'Poppins', sans-serif;
-      background: #fdfdfd;
-      color: #444;
+      background: #fffafc;
+      color: #333;
       margin: 0;
       padding: 0;
     }
+    h1, h2 {
+      font-weight: 600;
+    }
+
+    /* Header */
     header {
       text-align: center;
-      padding: 3rem 1rem;
-      background: linear-gradient(120deg, #fcefee, #f9d5ec);
+      padding: 4rem 1rem;
+      background: linear-gradient(135deg, #ffe6f0, #fff);
+      border-bottom: 2px solid #f9d5ec;
       animation: fadeIn 1.5s ease-in-out;
     }
     header h1 {
-      font-size: 2.8rem;
-      color: #333;
+      font-size: 3rem;
+      color: #d46a9e;
     }
+    header p {
+      font-size: 1.2rem;
+      color: #666;
+    }
+
+    /* Navigation */
     nav {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      margin-top: 1rem;
+      gap: 2rem;
+      margin-top: 2rem;
     }
     nav a {
       text-decoration: none;
-      color: #666;
+      color: #444;
       font-weight: 500;
-      transition: color 0.3s ease;
+      position: relative;
     }
-    nav a:hover {
-      color: #d46a9e;
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #d46a9e;
+      transition: width 0.3s;
     }
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Sections */
     section {
-      padding: 2rem;
-      max-width: 900px;
+      padding: 3rem 2rem;
+      max-width: 1000px;
       margin: auto;
       animation: slideUp 1.2s ease;
     }
     .card {
       background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      margin: 1.5rem 0;
-      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      margin: 2rem 0;
+      padding: 2rem;
       transition: transform 0.3s ease;
     }
     .card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-8px);
     }
     h2 {
       color: #d46a9e;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
+
+    /* Footer */
     footer {
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
       color: #999;
+      background: #fff0f6;
     }
+
+    /* Animations */
     @keyframes fadeIn {
       from {opacity: 0;}
       to {opacity: 1;}
     }
     @keyframes slideUp {
-      from {transform: translateY(30px); opacity: 0;}
+      from {transform: translateY(40px); opacity: 0;}
       to {transform: translateY(0); opacity: 1;}
     }
   </style>
@@ -92,7 +122,8 @@
   </section>
 
   <section id="projects" class="card">
-    <h2>Projects</h2>
+    <h2>🕹️ Project Arcade</h2>
+    <p>Four builds. Four little worlds. Pick one and press play ✨</p>
     <ul>
       <li><strong>FlexVote 🗳️</strong> — Secure online voting system. <em>Java · Spring Boot · MySQL · REST</em></li>
       <li><strong>BuzzTalk 💬</strong> — Real-time chat experience. <em>JavaScript · Sockets · Real-time</em></li>
@@ -102,7 +133,7 @@
   </section>
 
   <section id="skills" class="card">
-    <h2>Skill Tree</h2>
+    <h2>🧠 Skill Tree</h2>
     <p>☕ Java — MAX ENERGY<br>
        🌱 Spring Boot — Level 8<br>
        🗄️ Databases — Level 7<br>
@@ -113,15 +144,15 @@
   </section>
 
   <section id="journey" class="card">
-    <h2>Journey</h2>
+    <h2>🏆 Journey</h2>
     <p>💼 Software Developer / SDE I · Genpact (2025 → now)<br>
        🎓 B.Tech Computer Science · Chitkara University (2021 → 2025)<br>
        ✨ Side Quest: Keep Learning — DSA, backend engineering, cloud, modern tools</p>
   </section>
 
   <section id="contact" class="card">
-    <h2>Contact</h2>
-    <p>💌 Say hello · 💼 LinkedIn · 🧩 LeetCode · 🐙 GitHub</p>
+    <h2>💌 Let’s Connect</h2>
+    <p>💼 LinkedIn · 🧩 LeetCode · 🐙 GitHub</p>
   </section>
 
   <footer>
