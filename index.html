@@ -2,161 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>🎀 Mahima's World</title>
+  <title>Mahima's 3D Portfolio</title>
   <style>
-    /* Base */
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #fffafc;
-      color: #333;
       margin: 0;
-      padding: 0;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      font-family: 'Fira Code', monospace;
+      overflow: hidden;
     }
-    h1, h2 {
-      font-weight: 600;
-    }
-
-    /* Header */
     header {
-      text-align: center;
-      padding: 4rem 1rem;
-      background: linear-gradient(135deg, #ffe6f0, #fff);
-      border-bottom: 2px solid #f9d5ec;
-      animation: fadeIn 1.5s ease-in-out;
-    }
-    header h1 {
-      font-size: 3rem;
-      color: #d46a9e;
-    }
-    header p {
-      font-size: 1.2rem;
-      color: #666;
-    }
-
-    /* Navigation */
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: #444;
-      font-weight: 500;
-      position: relative;
-    }
-    nav a::after {
-      content: '';
       position: absolute;
-      width: 0%;
-      height: 2px;
-      bottom: -4px;
-      left: 0;
-      background-color: #d46a9e;
-      transition: width 0.3s;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: #00ffcc;
+      font-size: 2rem;
     }
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    /* Sections */
-    section {
-      padding: 3rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-      animation: slideUp 1.2s ease;
+    .overlay {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: #fff;
     }
     .card {
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-      margin: 2rem 0;
-      padding: 2rem;
+      background: rgba(20,20,20,0.9);
+      border: 1px solid #00ffcc;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem;
       transition: transform 0.3s ease;
     }
     .card:hover {
-      transform: translateY(-8px);
-    }
-    h2 {
-      color: #d46a9e;
-      margin-bottom: 1rem;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #999;
-      background: #fff0f6;
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-    @keyframes slideUp {
-      from {transform: translateY(40px); opacity: 0;}
-      to {transform: translateY(0); opacity: 1;}
+      transform: scale(1.05);
+      border-color: #ff00ff;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>🎀 Mahima's World</h1>
-    <p>SOFTWARE ENGINEER · JAVA & BACKEND</p>
-    <nav>
-      <a href="#about">💗 About</a>
-      <a href="#skills">🧠 Skills</a>
-      <a href="#projects">💻 Projects</a>
-      <a href="#journey">🎮 Journey</a>
-      <a href="#contact">💌 Contact</a>
-    </nav>
-  </header>
+  <header>Mahima Duggal — Software Engineer</header>
+  <div class="overlay">
+    <div class="card">FlexVote 🗳️ — Java, Spring Boot, MySQL</div>
+    <div class="card">BuzzTalk 💬 — JavaScript, Sockets, Real-time</div>
+    <div class="card">FocusFeed 📰 — APIs, JavaScript, UI/UX</div>
+    <div class="card">Occasio 🎟️ — Backend, APIs, Database</div>
+  </div>
 
-  <section id="about" class="card">
-    <h2>About Me</h2>
-    <p>Hey there! I'm Mahima Duggal ✦ — Java developer by day, problem-solver by nature, and coffee + code enthusiast with a soft spot for good UI. I build backend systems, APIs and web experiences that actually feel good to use. 💻💗</p>
-  </section>
+  <canvas id="bg"></canvas>
 
-  <section id="projects" class="card">
-    <h2>🕹️ Project Arcade</h2>
-    <p>Four builds. Four little worlds. Pick one and press play ✨</p>
-    <ul>
-      <li><strong>FlexVote 🗳️</strong> — Secure online voting system. <em>Java · Spring Boot · MySQL · REST</em></li>
-      <li><strong>BuzzTalk 💬</strong> — Real-time chat experience. <em>JavaScript · Sockets · Real-time</em></li>
-      <li><strong>FocusFeed 📰</strong> — News platform. <em>APIs · JavaScript · UI/UX</em></li>
-      <li><strong>Occasio 🎟️</strong> — Event management platform. <em>Backend · APIs · Database</em></li>
-    </ul>
-  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({canvas: document.getElementById('bg')});
+    renderer.setSize(window.innerWidth, window.innerHeight);
 
-  <section id="skills" class="card">
-    <h2>🧠 Skill Tree</h2>
-    <p>☕ Java — MAX ENERGY<br>
-       🌱 Spring Boot — Level 8<br>
-       🗄️ Databases — Level 7<br>
-       ⚛️ Frontend — Level 6<br>
-       ☁️ Cloud & Tools — Level 5<br>
-       ⚙️ Automation — Level 6<br>
-       🧩 Problem Solving — Always upgrading</p>
-  </section>
+    // Particles
+    const geometry = new THREE.BufferGeometry();
+    const particles = 5000;
+    const positions = new Float32Array(particles * 3);
+    for (let i = 0; i < particles * 3; i++) {
+      positions[i] = (Math.random() - 0.5) * 200;
+    }
+    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    const material = new THREE.PointsMaterial({color: 0x00ffcc, size: 0.5});
+    const points = new THREE.Points(geometry, material);
+    scene.add(points);
 
-  <section id="journey" class="card">
-    <h2>🏆 Journey</h2>
-    <p>💼 Software Developer / SDE I · Genpact (2025 → now)<br>
-       🎓 B.Tech Computer Science · Chitkara University (2021 → 2025)<br>
-       ✨ Side Quest: Keep Learning — DSA, backend engineering, cloud, modern tools</p>
-  </section>
+    camera.position.z = 50;
 
-  <section id="contact" class="card">
-    <h2>💌 Let’s Connect</h2>
-    <p>💼 LinkedIn · 🧩 LeetCode · 🐙 GitHub</p>
-  </section>
-
-  <footer>
-    Made with ♡, coffee ☕ & lots of pink · Mahima Duggal · 2026 🎀
-  </footer>
+    function animate() {
+      requestAnimationFrame(animate);
+      points.rotation.y += 0.0005;
+      renderer.render(scene, camera);
+    }
+    animate();
+  </script>
 </body>
 </html>
